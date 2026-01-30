@@ -1,0 +1,15 @@
+img {
+    width: 100%;
+    height: auto;
+}
+.box_informativo {
+    font-family: cursive;
+    h1 {color:orange}
+    p {color:brown}
+    ul {color:brown}
+    border: 2px yellow solid;
+    width: auto;
+    padding: 20px;
+    background-color: #f9ff8b;
+    text-align: justify;
+}
