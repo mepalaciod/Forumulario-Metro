@@ -1,15 +1,37 @@
 img {
     width: 100%;
     height: auto;
+    margin: 30px;
+    alignment-baseline: center;
 }
 .box_informativo {
     font-family: cursive;
+    font-size: 20px;
     h1 {color:orange}
     p {color:brown}
     ul {color:brown}
     border: 2px yellow solid;
     width: auto;
     padding: 20px;
+    margin: 30px;
     background-color: #f9ff8b;
+    text-align: justify;
+}
+    .Preguntas_formulario {
+    font-family: cursive; 
+    font-size: 18px;
+    border: 3px gray solid;
+    margin: 30px;
+text-align: justify;
+    background-color: lightgray;
+padding: 20px;
+}
+.box_privacidad {
+    font-family: cursive;
+    font-size: 16px;
+    border: 2px lightyellow solid;
+    margin: 30px;
+    background-color: #f9ff8b;
+    padding: 20px;
     text-align: justify;
 }

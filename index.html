@@ -10,7 +10,7 @@
 <img src="imagen.jpeg" alt="Encabezado">
     <div class="box_informativo"><h1>SOLICITUD PERFIL ESTUDIANTIL (TIQUETE METRO)</h1>
     <p>Si cumples con estos requisitos puedes aplicar al beneficio</p> 
-   <ul>
+<ul>
     <li>Si eres beneficiario de Sapiencia, ya sea por medio de Fondos en programas de pregrado o posgrado, o a través de la Matrícula Cero, tienes la posibilidad de acceder al perfil preferencial en tu tarjeta cívica del Metro de Medellín.</li>
     <li>Residir en viviendas de estratos 1, 2 y 3.</li>
     <li>Tener entre 10 y hasta 28 años en el momento de la inscripción, o ser una persona con discapacidad.</li>
@@ -26,12 +26,14 @@
    <p>Se exceptúan las rutas integradas, las cuales hacen un recorrido
     desde los barrios hasta las estaciones de la red Metro. 
     No aplican dado que éstos pertenecen a empresas privadas que presten el servicio de articulación a la red del Sistema Metro.
-     Nota: Sapiencia solo hace el reporte de la presente solicitud a la SECRETARIA DE EDUCACIÓN DEL DISTRITO ESPECIAL DE CIENCIA, 
-     TECNOLOGÍA E INNOVACIÓN DE MEDELLÍN y posteriormente son ellos quienes hacen la validación final de requisitos y reportan oficialmente al METRO. CIRCULAR NÚMERO 202460000077 DE 02/04/2024
-   </p></div>
-<h2>Formulario de solicitud</h2>
- <p>Es indispensable para la solicitud del beneficiario diligenciar completamente este Formulario</p>
- <form action="/enviar-respuesta" method="post">
+    Nota: Sapiencia solo hace el reporte de la presente solicitud a la SECRETARIA DE EDUCACIÓN DEL DISTRITO ESPECIAL DE CIENCIA, 
+    TECNOLOGÍA E INNOVACIÓN DE MEDELLÍN y posteriormente son ellos quienes hacen la validación final de requisitos y reportan oficialmente al METRO. CIRCULAR NÚMERO 202460000077 DE 02/04/2024
+</p></div>
+
+<div class="Preguntas_formulario">   
+    <h2>Formulario de solicitud</h2>
+<p>Es indispensable para la solicitud del beneficiario diligenciar completamente este Formulario</p>
+<form action="/enviar-respuesta" method="post">
     <label for="pregunta">¿Por qué vas a diligenciar el formulario?</label>
     <Select name="Seleccionar" id="Seleccionar">
         <option value="Seleccionar">Seleccionar</option>
@@ -146,7 +148,7 @@
         <option value="MEDELLÍN">MEDELLÍN</option>
         <option value="SABANETA">SABANETA</option>
     </Select>
-   
+
     <div></div><label for="Fecha_de_nacimiento">Fecha de nacimiento</label>
     <input type="date" id="Fecha_de_nacimiento" name="Fecha_de_nacimiento" required>
     
@@ -193,10 +195,10 @@
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-   </Select>
+</Select>
     
-   <div></div><label for="Número_de_cívica_personalizada">Número de cívica Número_de_cívica_personalizada</label>
-   <Input type="number" id="Número_de_cívica_personalizada" min="5" max="15" required>
+<div></div><label for="Número_de_cívica_personalizada">Número de cívica Número_de_cívica_personalizada</label>
+<Input type="number" id="Número_de_cívica_personalizada" min="5" max="15" required>
 
     <div></div><label for="¿Presenta_Discapacidad?">¿Presenta ¿Presenta_Discapacidad?</label>"
     <Select name="¿Presenta_Discapacidad?" id="¿Presenta_Discapacidad?">
@@ -217,6 +219,7 @@
         <option value="BILINGÜISMO">BILINGÜISMO</option>
     </Select>
 
+
     <div></div><button onclick="window.modal1.showModal();">Adjuntar copia documento de identidad</button>
     <dialog id="modal1">
         <h2>Adjuntar copia de documento de identidad</h2>
@@ -230,7 +233,7 @@
     </dialog>
     
     <button onclick="window.modal2.showModal();">Copia de servicios públicos domiciliarios</button>
-     <dialog id="modal2">
+    <dialog id="modal2">
         <h2>Adjuntar copia de servicios públicos domiciliarios</h2>
         <label for="Elegir_archivo">Elegir archivo</label>
         <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
@@ -239,10 +242,10 @@
         <button type="submit">Subir archivo</button>
         </form>
         <button onclick="window.modal2.close();">Salir</button>
-     </dialog>
+    </dialog>
     
-     <button onclick="window.modal3.showModal();">Copia de la tarjeta cívica</button>
-     <dialog id="modal3">
+    <button onclick="window.modal3.showModal();">Copia de la tarjeta cívica</button>
+    <dialog id="modal3">
         <h2>Adjuntar Copia de la tarjeta cívica</h2>
         <label for="Elegir_archivo">Elegir archivo</label>
         <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
@@ -254,7 +257,7 @@
         </dialog>
 
     <button onclick="window.modal4.showModal();">Certificado de discapacidad o historia clínica</button>
-     <dialog id="modal4">
+    <dialog id="modal4">
         <h2>Adjuntar Certificado de discapacidad o historia clínica</h2>
         <label for="Elegir_archivo">Elegir archivo</label>
         <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
@@ -262,13 +265,13 @@
         <button type="submit">Subir archivo</button>
         </form>
         <button onclick="window.modal4.close();">Salir</button>
-   </dialog>
+</dialog></div>
 
-   <div></div><p>Es importante señalar que todo estudiante que requiere del PERFIL ESTUDIANTIL (TIQUETE METRO) deberá tener la tarjeta 
-   cívica personalizada, ya que es a través de este documento, es asignado el beneficio. En caso que el estudiante realice cambio del tipo o 
-   del número de documento de identidad, deberá acercarse a los Puntos de Atención al Cliente -PAC-de La Empresa Metro de Medellín, para solicitar 
-   la actualización de su tarjeta cívica. En caso de pérdida o reposición de la tarjeta cívica, el estudiante deberá acercarse a un Punto de 
-   Atención al Cliente -PAC- del Metro de Medellín, para reportar su perdida y realizar el trámite para la expedición de una nueva tarjera cívica
+<div class="box_privacidad"><div></div><p>Es importante señalar que todo estudiante que requiere del PERFIL ESTUDIANTIL (TIQUETE METRO) deberá tener la tarjeta 
+cívica personalizada, ya que es a través de este documento, es asignado el beneficio. En caso que el estudiante realice cambio del tipo o 
+del número de documento de identidad, deberá acercarse a los Puntos de Atención al Cliente -PAC-de La Empresa Metro de Medellín, para solicitar 
+la actualización de su tarjeta cívica. En caso de pérdida o reposición de la tarjeta cívica, el estudiante deberá acercarse a un Punto de 
+Atención al Cliente -PAC- del Metro de Medellín, para reportar su perdida y realizar el trámite para la expedición de una nueva tarjera cívica
     y necesariamente deberá reportar el cambio a Sapiencia, para que, en el siguiente informe, se envíe el reporte actualizado de la información 
     del estudiante beneficiario.
     En observancia de la Ley 1581 de 2012, reglamentada parcialmente por el Decreto 1377 de 2013 yen la Política de uso y tratamiento de datos 
@@ -276,7 +279,7 @@
     interpretando todos estos de manera sistémica e integral en aras de la protección de los derechos y principios que circundan el Habeas Data 
     y el Tratamiento de Datos Personales, se establecen las siguientes condiciones:</p>
     <ol>
-        <li>FINALIDAD DEL TRATAMIENTO DE LOS DATOS PERSONALES PARA PERSONAJURÍDICA Y NATURAL:</li><ol type="a"> 
+        <b><li>FINALIDAD DEL TRATAMIENTO DE LOS DATOS PERSONALES PARA PERSONAJURÍDICA Y NATURAL:</b></li><ol type="a"> 
         <li>el cumplimiento del lleno de requisitos formales para la suscripción de actas de compromiso y la posterior aplicación de los derechos y 
             obligaciones que surgen entre las partes con ocasión de su suscripción.</li>
         <li>el cumplimiento de la Ley de Transparencia y el Derecho de Acceso a la Información Pública Nacional (Ley 1712 del 2014).</li>
@@ -290,19 +293,20 @@
             así como los relativos a la salud, vida sexual y datos biométricos). Manifiesto que me informaron que los datos sensibles que se 
             recolectarán serán utilizados para las finalidades descritas por la Agencia (Uso, recolección, actualización, transferencia)</li></ol type="a">
 <p>Nota: Cualquier uso de la información distinto a lo aquí establecido, no es aceptado ni permitido por SAPIENCIA</p>
-        <li>AVISO DE PRIVACIDAD:</li><p>Para los efectos de esta cláusula y del aviso de privacidad, se consideran datos sensibles aquellos que puedan revelar 
+        <b><li>AVISO DE PRIVACIDAD:</b></li><p>Para los efectos de esta cláusula y del aviso de privacidad, se consideran datos sensibles aquellos que puedan revelar 
             aspectos como origen racial o étnico, estado de salud presente y futura, información genética, creencias religiosas, filosóficas y morales, afiliación 
             sindical, opiniones políticas, preferencia sexual y todos aquellos datos que puedan afectar la intimidad del titular o cuyo uso indebido pueda 
             generar su discriminación. Respecto a estos SAPIENCIA se obliga al uso adecuado de los mismos en concordancia con la normativa vigente, la buena fe, 
             el orden público y el presente Aviso.</p>
-        <li>MECANISMOS PARA LA PROTECCIÓN DE DATOS PERSONALES: ACCESO,RECTIFICACIÓN, CANCELACIÓN U OPOSICIÓN:</li><p>la persona natural o jurídica Titular de Datos Personales puede solicitar a SAPIENCIA en cualquier momento, el acceso, la rectificación, la cancelación u oposición respecto a los datos personales que le conciernen, en este sentido, presentará su solicitud radicándola directamente en la Entidad o ingresando a la página web 
+        <b><li>MECANISMOS PARA LA PROTECCIÓN DE DATOS PERSONALES: ACCESO,RECTIFICACIÓN, CANCELACIÓN U OPOSICIÓN:</b></li><p>la persona natural o jurídica Titular de Datos Personales puede solicitar a SAPIENCIA en cualquier momento, el acceso, la rectificación, la cancelación u oposición respecto a los datos personales que le conciernen, en este sentido, presentará su solicitud radicándola directamente en la Entidad o ingresando a la página web 
         http://www.sapiencia.gov.co en la opción de Contáctenos o escribiendo al correo electrónicoinfo@sapiencia.gov.co o comunicándose al teléfono en Medellín:
             (+57 4) 4447947.</p>
-      </ol>
-      <p>PARÁGRAFO: con la suscripción de este formulario se entiende aceptada la finalidad del tratamiento de datos y que conoce los mecanismos para su protección.</p>
- <input type="checkbox" id="acepto" name="terminos" checked>
- <label for="acepto">acepto</label>
- <form action="/enviar" method="post">
+    </ol>
+    <p>PARÁGRAFO: con la suscripción de este formulario se entiende aceptada la finalidad del tratamiento de datos y que conoce los mecanismos para su protección.</p>
+<input type="checkbox" id="acepto" name="terminos" checked>
+<label for="acepto">acepto</label>
+</div>
+<form action="/enviar" method="post">
     <button type="submit">Enviar</button></form>
     </body>
 </html>
