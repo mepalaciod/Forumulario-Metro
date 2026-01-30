@@ -1,19 +1,17 @@
 img {
     width: 100%;
     height: auto;
-    margin: 20px;
-    text-align: center;
+    border-radius: 10px
 }
 .box_informativo {
     height: auto;
     font-family: cursive;
     font-size: 18px;
-    h1 {color:orange}
-    p {color:brown}
-    ul {color:brown}
+    h1 {color:orange;text-align: center;}
+    p {color:brown;}
+    ul {color:brown;}
     border: 2px yellow solid;
     width: auto;
-    padding: 20px;
     margin: 30px;
     background-color: #f9ff8b;
     text-align: justify;
@@ -29,16 +27,29 @@ padding: 45px;
 }
 .box_privacidad {
     font-family: cursive;
-    font-size: 16px;
+    font-size: 14px;
     border: 2px lightyellow solid;
     margin: 30px;
     background-color: #f9ff8b;
     padding: 20px;
     text-align: justify;
 }
-form {
-    display: flex-inlineblock;
-    flex-direction: column; 
-    gap: 40px
-    padding: 20px;
+form { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding:20px;
+    line-height: normal;
 }
+button {
+    background-color: transparent;border:2px green solid;
+font-family:cursive;
+    font-size: 16px;}
+
+.botón_adjunto {
+    display: inline-block;
+    margin:10px;
+    vertical-align: top;
+}
+
