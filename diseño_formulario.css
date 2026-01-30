@@ -1,12 +1,13 @@
 img {
     width: 100%;
     height: auto;
-    margin: 30px;
-    alignment-baseline: center;
+    margin: 20px;
+    text-align: center;
 }
 .box_informativo {
+    height: auto;
     font-family: cursive;
-    font-size: 20px;
+    font-size: 18px;
     h1 {color:orange}
     p {color:brown}
     ul {color:brown}
@@ -18,13 +19,13 @@ img {
     text-align: justify;
 }
     .Preguntas_formulario {
-    font-family: cursive; 
-    font-size: 18px;
-    border: 3px gray solid;
+        font-family: cursive; 
+    font-size: 16px;
+    border: 3px beige solid;
     margin: 30px;
 text-align: justify;
-    background-color: lightgray;
-padding: 20px;
+    background-color: beige;
+padding: 45px;
 }
 .box_privacidad {
     font-family: cursive;
@@ -34,4 +35,10 @@ padding: 20px;
     background-color: #f9ff8b;
     padding: 20px;
     text-align: justify;
+}
+form {
+    display: flex-inlineblock;
+    flex-direction: column; 
+    gap: 40px
+    padding: 20px;
 }

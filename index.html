@@ -22,8 +22,8 @@
     <li>MetroPlus</li>
     <li>Rutas Alimentadoras</li>
     <li>Tranvía</li>
-   </ul>
-   <p>Se exceptúan las rutas integradas, las cuales hacen un recorrido
+</ul>
+<p>Se exceptúan las rutas integradas, las cuales hacen un recorrido
     desde los barrios hasta las estaciones de la red Metro. 
     No aplican dado que éstos pertenecen a empresas privadas que presten el servicio de articulación a la red del Sistema Metro.
     Nota: Sapiencia solo hace el reporte de la presente solicitud a la SECRETARIA DE EDUCACIÓN DEL DISTRITO ESPECIAL DE CIENCIA, 
@@ -35,11 +35,11 @@
 <p>Es indispensable para la solicitud del beneficiario diligenciar completamente este Formulario</p>
 <form action="/enviar-respuesta" method="post">
     <label for="pregunta">¿Por qué vas a diligenciar el formulario?</label>
-    <Select name="Seleccionar" id="Seleccionar">
+    <div><Select name="Seleccionar" id="Seleccionar">
         <option value="Seleccionar">Seleccionar</option>
         <option value="Solicitar Beneficio">Solicitar Beneficio</option>
         <option value="Actualizar información">Actualizar información</option>
-    </Select>
+    </Select></div>
     
     <div></div><label for="Tipo_documento">Tipo de documento</label>
     <Select name="Tipo_documento" id="Tipo_documento">
@@ -54,8 +54,7 @@
         <option value="PED">PED</option>
         <option value="CE">CE</option>
     </Select>
-    
-    <div></div><label for="Numero_documento">Número de documento</label>
+    <label for="Numero_documento">Número de documento</label>
     <input type="number" id="Numero_documento" name="Numero_documento" min="5" max="15">
     
     <div></div><label for="Primer_nombre">Primer nombre</label>
