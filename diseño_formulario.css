@@ -3,6 +3,9 @@ img {
     height: auto;
     border-radius: 10px
 }
+body {
+    cursor: url('cursor.png'), auto
+}
 .box_informativo {
     height: auto;
     font-family: cursive;
@@ -43,9 +46,12 @@ form {
     line-height: normal;
 }
 button {
-    background-color: transparent;border:2px green solid;
-font-family:cursive;
-    font-size: 16px;}
+    background-color: transparent;
+    border:2px green solid;
+    font-family:cursive;
+    font-size: 16px;
+cursor: pointer;
+}
 
 .botón_adjunto {
     display: inline-block;
