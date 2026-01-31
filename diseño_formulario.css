@@ -36,11 +36,10 @@ padding: 45px;
 }
 form { 
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding:20px;
-    line-height: normal;
+    display: flex; /* Cambia la dirección de los elementos a horizontal */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una línea */
+    gap: 20px; /* Espaciado entre los campos */
+    align-items: center; /* Alinea los elementos verticalmente */
 }
 button {
     background-color: transparent;border:2px green solid;
@@ -53,3 +52,21 @@ font-family:cursive;
     vertical-align: top;
 }
 
+input[type="text"] {
+    width: 300px; 
+    padding: 5px; 
+    border: px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+form label {
+    width: auto; /* Ajusta el ancho de las etiquetas */
+    margin-right: 10px; /* Espaciado entre la etiqueta y el campo */
+}
+
+form input,
+form select {
+    flex: 1; /* Permite que los campos se ajusten al espacio disponible */
+    min-width: 200px; /* Ancho mínimo para los campos */
+}
