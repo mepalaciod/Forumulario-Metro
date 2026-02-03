@@ -41,7 +41,7 @@
         <option value="Actualizar información">Actualizar información</option>
     </select></div>
     
-    <div></div><label for="Tipo_documento">Tipo de documento</label>
+    <div class="identificación"><label for="Tipo_documento">Tipo de documento</label>
     <select name="Tipo_documento" id="Tipo_documento">
         <option value="Seleccionar">Seleccionar</option>
         <option value="CC">CC</option>
@@ -56,16 +56,16 @@
     </select>
     <label for="Numero_documento">Número de documento</label>
     <input type="number" id="Numero_documento" name="Numero_documento" min="5" max="15">
-    
-    <div></div><label for="Primer_nombre">Primer nombre</label>
+    </div>
+
+    <div class="nombre"><label for="Primer_nombre">Primer nombre</label>
     <input type="text" id="Primer_nombre" name="Primer_nombre" required>
     <label for="Segundo_nombre">Segundo nombre</label>
     <input type="text" id="Segundo_nombre" name="Segundo_nombre" required>
     <label for="Primer_apellido">Primer apellido</label>
     <input type="text" id="Primer_apellido" name="Primer_apellido" required>
     <label for="Segundo_apellido">Segundo apellido</label>
-    <input type="text" id="Segundo_apellido" name="Segundo_apellido" required>
-
+    <input type="text" id="Segundo_apellido" name="Segundo_apellido" required></div>
     <div></div><label for="Nombres_apellidos">NOMBRES Y APELLIDOS (como esta marcada la CÍVICA)</label>
     <input type="text" id="Nombres_apellidos" name="Nombres_apellidos" required>
     
@@ -80,7 +80,7 @@
     <label for="Cuál?">Cuál?</label>
     <input type="text" id="Cuál?" name="Cuál?">
     
-    <div></div><label for="Vía_principal">Vía principal</label>
+    <div class="dirección"><label for="Vía_principal">Vía principal</label>
     <select name="Vía_principal" id="Vía_principal">
         <option value="AUTOPISTA">AUTOPISTA</option>
         <option value="AVENIDA">AVENIDA</option>
@@ -132,8 +132,8 @@
     <input type="number" id="Placa" name="Placa" required>
     <label for="Complemento">Complemento</label>
     <input type="text" id="Complemento" name="Complemento">
-    
-    <div></div><label for="Municipio_de_residencia">Municipio de residencia</label>
+    </div>
+    <label for="Municipio_de_residencia">Municipio de residencia</label>
     <select name="Municipio_de_residencia" id="Municipio_de_residencia">
         <option value="Seleccionar">Seleccionar</option>
         <option value="BARBOSA">BARBOSA</option>
@@ -147,13 +147,13 @@
         <option value="SABANETA">SABANETA</option>
     </select>
 
-    <div></div><label for="Fecha_de_nacimiento">Fecha de nacimiento</label>
+    <div class="nacimiento"><label for="Fecha_de_nacimiento">Fecha de nacimiento</label>
     <input type="date" id="Fecha_de_nacimiento" name="Fecha_de_nacimiento" required>
     
-    <div></div><label for="Edad">Edad</label>
-    <input type="number" id="Edad" name="Edad" min="10" max="99" required>
+    <label for="Edad">Edad</label>
+    <input type="number" id="Edad" name="Edad" min="10" max="99" required></div>
     
-    <div></div><label for="Estrato_Socioeconómico">Estrato socioeconómico</label>
+    <div class="relevante"><label for="Estrato_Socioeconómico">Estrato socioeconómico</label>
     <select name="Estrato_socioeconómico" id="Estrato_Socioeconómico" required>
         <option value="Seleccionar">Seleccionar</option>
         <option value="1">1</option>
@@ -164,7 +164,7 @@
         <option value="6">6</option>
     </select>
     
-    <div></div><label for="Nivel_o_puntaje_del_SISBEN">Nivel o puntaje del SISBEN</label>
+    <label for="Nivel_o_puntaje_del_SISBEN">Puntaje del SISBEN</label>
     <select name="Nivel_o_puntaje_del_SISBEN" id="Nivel_o_puntaje_del_SISBEN" required>
         <option value="Seleccionar">Seleccionar</option>
         <option value="A">A</option>
@@ -174,10 +174,10 @@
         <option value="No_tiene">No tiene</option>
     </select>
     
-    <div></div><label for="Teléfono_Célular">Teléfono célular</label>
-    <input type="number" name="Teléfono_célular" id="Teléfono_célular" max="10" required>
+    <label for="Teléfono_Célular">Teléfono célular</label>
+    <input type="number" name="Teléfono_célular" id="Teléfono_célular" max="10" required></div>
     
-    <div></div><label for="Nivel_académico">Nivel académico</label>
+    <div class="escolar"><label for="Nivel_académico">Nivel académico</label>
     <select name="Nivel_académico" id="Nivel_académico">
         <option value="Seleccionar"></option>
         <option value="PRIMARIA">PRIMARIA</option>
@@ -193,18 +193,18 @@
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-</select>
+</select></div>
     
-<div></div><label for="Número_de_cívica_personalizada">Número de cívica personalizada</label>
+<label for="Número_de_cívica_personalizada">Número de cívica personalizada</label>
 <input type="number" name="Número_de_cívica_personalizada" id="Número_de_cívica_personalizada" min="5" max="15" required>
 
-    <div></div><label for="¿Presenta_Discapacidad?">¿Presenta_Discapacidad?</label>
+    <label for="¿Presenta_Discapacidad?">¿Presenta Discapacidad?</label>
     <select name="¿Presenta_Discapacidad?" id="¿Presenta_Discapacidad?">
         <option value="Seleccionar">Seleccionar</option>
         <option value="SI">SI</option>
         <option value="NO">NO</option>
     </select>
-    <div></div><label for="¿Qué_beneficio_tiene_activo_con_Sapiencia?">¿Qué beneficio tiene activo con sapiencia?</label>
+    <label for="¿Qué_beneficio_tiene_activo_con_Sapiencia?">¿Qué beneficio tiene activo con sapiencia?</label>
     <select name="¿Qué_beneficio_tiene_activo_con_Sapiencia?" id="¿Qué_beneficio_tiene_activo_con_Sapiencia?">
         <option value="Seleccionar">Seleccionar</option>
         <option value="VISION4RIOS">VISION4RIOS</option>
@@ -216,6 +216,7 @@
         <option value="@MEDELLÍN">@MEDELLÍN</option>
         <option value="BILINGÜISMO">BILINGÜISMO</option>
     </select></form>
+</div>
     
     <div class="botón_adjunto">
         <button onclick="window.modal1.showModal();">Copia del documento de identificación</button>

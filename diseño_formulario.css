@@ -4,13 +4,14 @@ img {
     border-radius: 10px
 }
 body {
-    cursor: url('cursor.png'), auto
+    cursor: url("cursor.png"), auto;
 }
 .box_informativo {
     height: auto;
     font-family: cursive;
     font-size: 18px;
-    h1 {color:orange;text-align: center;}
+    h1 {color:orange;
+    text-align: center;}
     p {color:brown;}
     ul {color:brown;}
     border: 2px yellow solid;
@@ -21,12 +22,19 @@ body {
 }
     .Preguntas_formulario {
         font-family: cursive; 
-    font-size: 16px;
+    font-size: 18px;
     border: 3px beige solid;
     margin: 30px;
 text-align: justify;
     background-color: beige;
 padding: 45px;
+p{
+    color: gray;
+}
+h2 {justify-content: center;
+    text-align: center;
+
+}
 }
 .box_privacidad {
     font-family: cursive;
@@ -50,12 +58,14 @@ button {
     border:2px green solid;
     font-family:cursive;
     font-size: 16px;
-cursor: pointer;
+    cursor: pointer;
+    align-content: center;
 }
 
 .botón_adjunto {
     display: inline-block;
     margin:10px;
     vertical-align: top;
+    
 }
 
