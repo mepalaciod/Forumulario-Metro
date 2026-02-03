@@ -63,9 +63,11 @@ button {
 }
 
 .botón_adjunto {
-    display: inline-block;
+    display: flex;
+    gap: 10px;
+    justify-content: center;;
     margin:10px;
-    vertical-align: top;
+    vertical-align:top;
     
 }
 
