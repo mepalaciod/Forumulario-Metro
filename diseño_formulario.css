@@ -65,9 +65,14 @@ button {
 .botón_adjunto {
     display: flex;
     gap: 10px;
-    justify-content: center;;
+    justify-content: center;
     margin:10px;
     vertical-align:top;
-    
+}
+.enviar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin:20px;
 }
 
