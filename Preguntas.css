@@ -9,25 +9,25 @@
     gap: 10px;
 }
 .dirección {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f0f8ff;
-  max-width: 500px;
-  margin: 30px auto;
-  font-family: sans-serif;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    max-width: 500px;
+    margin: 30px auto;
+    font-family: sans-serif;
 }
 
 .dirección label {
-  display: block;
-  margin-top: 12px;
-  font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
 }
 
 .dirección input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
 }
 

@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario tiquete metro</title>
     <link rel="stylesheet" href="diseño_formulario.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-<img src="imagen.jpeg" alt="Encabezado">
-    <div class="box_informativo"><h1>SOLICITUD PERFIL ESTUDIANTIL (TIQUETE METRO)</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <div class="container-fluid">
+            <div class="col-12 bg-danger ms-12">
+        <img src="imagen.jpeg" alt="Encabezado">
+</div></div>
+
+    <div class="">
+        <div class="box_informativo"><h1>SOLICITUD PERFIL ESTUDIANTIL (TIQUETE METRO)</h1>
     <p>Si cumples con estos requisitos puedes aplicar al beneficio</p> 
 <ul>
     <li>Si eres beneficiario de Sapiencia, ya sea por medio de Fondos en programas de pregrado o posgrado, o a través de la Matrícula Cero, tienes la posibilidad de acceder al perfil preferencial en tu tarjeta cívica del Metro de Medellín.</li>
@@ -28,7 +36,7 @@
     No aplican dado que éstos pertenecen a empresas privadas que presten el servicio de articulación a la red del Sistema Metro.
     Nota: Sapiencia solo hace el reporte de la presente solicitud a la SECRETARIA DE EDUCACIÓN DEL DISTRITO ESPECIAL DE CIENCIA, 
     TECNOLOGÍA E INNOVACIÓN DE MEDELLÍN y posteriormente son ellos quienes hacen la validación final de requisitos y reportan oficialmente al METRO. CIRCULAR NÚMERO 202460000077 DE 02/04/2024
-</p></div>
+</p></div></div>
 
 <div class="Preguntas_formulario">   
     <h2>Formulario de solicitud</h2>
@@ -218,6 +226,7 @@
     </select></form>
 </div>
     
+    
     <div class="botón_adjunto">
         <button onclick="window.modal1.showModal();">Copia del documento de identificación</button>
     <dialog id="modal1">
@@ -296,7 +305,7 @@ Atención al Cliente -PAC- del Metro de Medellín, para reportar su perdida y re
             (+57 4) 4447947.</p>
     </ol>
     <p>PARÁGRAFO: con la suscripción de este formulario se entiende aceptada la finalidad del tratamiento de datos y que conoce los mecanismos para su protección.</p>
-<input type="checkbox" id="acepto" name="terminos" checked>
+<input type="checkbox" id="acepto" name="terminos" value="checked">
 <label for="acepto">acepto</label>
 
 <form action="/enviar" method="post">

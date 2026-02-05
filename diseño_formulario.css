@@ -8,17 +8,20 @@ body {
 }
 .box_informativo {
     height: auto;
-    font-family: cursive;
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 18px;
     h1 {color:orange;
+    font-family:'Helvetica Rounded', sans-serif;
     text-align: center;}
     p {color:brown;}
     ul {color:brown;}
     border: 2px yellow solid;
     width: auto;
-    margin: 30px;
+    margin: 20px;
     background-color: #f9ff8b;
     text-align: justify;
+    padding: 30px;
+
 }
     .Preguntas_formulario {
         font-family: cursive; 
