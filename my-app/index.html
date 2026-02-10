@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario tiquete metro</title>
-    <link rel="stylesheet" href="diseño_formulario.css">
+    <link rel="stylesheet" href="CSS/diseño_formulario.css">
+    <link rel="questions" href="CSS/Preguntas.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -88,7 +90,11 @@
     <label for="Cuál?">Cuál?</label>
     <input type="text" id="Cuál?" name="Cuál?">
     
-    ¿Cuál es la dirección de su residencia?<div class="dirección"><label for="Vía_principal">Vía principal</label>
+    ¿Cuál es la dirección de su residencia?
+    
+    <div class="dirección">
+        
+        <label for="víaPrincipal">Vía principal</label>
     <select name="Vía_principal" id="Vía_principal">
         <option value="AUTOPISTA">AUTOPISTA</option>
         <option value="AVENIDA">AVENIDA</option>
@@ -110,12 +116,12 @@
         <option value="VARIANTE">VARIANTE</option>
         <option value="VIA">VIA</option>
     </select>
-    <label for="NÚMERO">NÚMERO</label>
-    <input type="number" id="NÚMERO" name="NÚMERO" required>
-    <label for="PREFIJO">Prefijo</label>
-    <input type="text" id="PREFIJO" name="PREFIJO" required>
-    <label for="Nombre_vía">Nombre vía</label>
-    <select name="Nombre_vía" id="Nombre_vía">
+    <label for="numero">NÚMERO</label>
+    <input type="number" id="numero" name="numero" required>
+    <label for="prefijo1">Prefijo</label>
+    <input type="text" id="prefijo1" name="prefijo1" required>
+    <label for="nombreVia">Nombre vía</label>
+    <select name="nombreVia" id="Nombre_vía">
         <option value="Seleccione">Seleccione</option>
         <option value="BIS">BIS</option>
         <option value="ESTE">ESTE</option>
@@ -123,12 +129,12 @@
         <option value="OESTE">OESTE</option>
         <option value="SUR">SUR</option>
     </select>
-    <label for="Via_secundaria">VÍA SECUNDARIA</label>
-    <input type="number" id="Via_secundaria" name="Via_secundaria" required>
-    <label for="Prefijo">Prefijo</label>
-    <input type="text" id="Prefijo" name="Prefijo" required>
-    <label for="Cuadrante">Cuadrante</label>
-    <select name="Cuadrante" id="Cuadrante">
+    <label for="viaSecundaria">VÍA SECUNDARIA</label>
+    <input type="number" id="viaSecundaria" name="viaSecundaria" required>
+    <label for="prefijo2">Prefijo</label>
+    <input type="text" id="prefijo2" name="prefijo2" required>
+    <label for="cuadrante">Cuadrante</label>
+    <select name="cuadrante" id="cuadrante">
         <option value="Seleccione">Seleccione</option>
         <option value="BIS">BIS</option>
         <option value="ESTE">ESTE</option>
@@ -136,11 +142,15 @@
         <option value="OESTE">OESTE</option>
         <option value="SUR">SUR</option>
     </select>
-    <label for="Placa">Placa</label>
-    <input type="number" id="Placa" name="Placa" required>
-    <label for="Complemento">Complemento</label>
-    <input type="text" id="Complemento" name="Complemento">
-    </div>
+    <label for="placa">Placa</label>
+    <input type="number" id="placa" name="placa" required>
+    <label for="complemento">Complemento</label>
+    <input type="text" id="complemento" name="complemento"></label>
+   
+   
+<div id="direccionCompleta">Dirección completa: </div>
+     <input type="text" id="direccionCompletaInput" name="direccionCompleta" readonly> 
+</div>
     <label for="Municipio_de_residencia">Municipio de residencia</label>
     <select name="Municipio_de_residencia" id="Municipio_de_residencia">
         <option value="Seleccionar">Seleccionar</option>
@@ -162,7 +172,7 @@
     <input type="date" id="Fecha_de_nacimiento" name="Fecha_de_nacimiento" class="form-control" onchange="calcularEdad()">
     </div>
     <div class="alert alert-info">
-        Edad: <span id="resultadoEdad" class="fw-bold">0</span> años
+        Edad: <span id="resultadoEdad" class="fw-bold">0</span>años
                 </div>
             </div>
         </div>
@@ -320,5 +330,6 @@ Atención al Cliente -PAC- del Metro de Medellín, para reportar su perdida y re
 
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+    <script src="script.js"></script>
 </body>
 </html>
