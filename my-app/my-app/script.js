@@ -20,12 +20,12 @@ document.getElementById("resultadoEdad").innerHTML = `<span class="badge bg-succ
 }
 document.getElementById("Fecha_de_nacimiento").addEventListener("change", calcularEdad);
 
-function formateardireccionCompleta (viaPrincipal, numero, prefijo1, nombreVia, viaSecundaria, prefijo2, cuadrante, placa, complemento) {
-  return `${viaPrincipal} ${numero}, ${prefijo1}, ${nombreVia} ${viaSecundaria} ${prefijo2} ${cuadrante} ${placa} ${complemento}`.toUpperCase();
+function formateardireccionCompleta (víaPrincipal, numero, prefijo1, nombreVia, prefijo2, cuadrante, placa, complemento) {
+  return `${víaPrincipal} ${numero}, ${prefijo1}, ${nombreVia} ${viaSecundaria} ${prefijo2} ${cuadrante} ${placa} ${complemento}`.toUpperCase();
 }
 
 function actualizarDireccion() {
-  const viaPrincipal = document.getElementById("viaPrincipal").value;
+  const víaPrincipal = document.getElementById("Vía_principal").value;
   const numero = document.getElementById("numero").value;
   const prefijo1 = document.getElementById("prefijo1").value;
   const nombreVia = document.getElementById("nombreVia").value;
@@ -35,14 +35,12 @@ function actualizarDireccion() {
   const placa = document.getElementById("placa").value;
   const complemento = document.getElementById("complemento").value;
   
-  const direccionFormateada = formateardireccionCompleta(viaPrincipal, numero, prefijo1, 
-    nombreVia, viaSecundaria, prefijo2, cuadrante, placa, complemento);
-  
-    document.getElementById("direcciónCompleta").addEventListener("input", direccionFormateada);
-    document.getElementById("direccionCompletaInput").value = direccionFormateada;
+  const direccionFormateada = formateardireccionCompleta(víaPrincipal, numero, prefijo1, nombreVia, viaSecundaria, prefijo2, cuadrante, placa, complemento);
+  document.getElementById("direccionCompletaInput").value = direccionFormateada;
 }
 
-document.getElementById("viaPrincipal").addEventListener("change", actualizarDireccion);
+// Event listeners para los campos de dirección
+document.getElementById("Vía_principal").addEventListener("change", actualizarDireccion);
 document.getElementById("numero").addEventListener("change", actualizarDireccion);
 document.getElementById("prefijo1").addEventListener("input", actualizarDireccion);
 document.getElementById("nombreVia").addEventListener("change", actualizarDireccion);
