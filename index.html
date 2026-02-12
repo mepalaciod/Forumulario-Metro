@@ -44,16 +44,27 @@
     <h2>Formulario de solicitud</h2>
 <p>Es indispensable para la solicitud del beneficiario diligenciar completamente este Formulario</p>
 <form action="/enviar-respuesta" method="post">
-    <label for="pregunta">¿Por qué vas a diligenciar el formulario?</label>
-    <div><select name="¿Por qué vas a diligenciar el formulario?" id="Razones">
-        <option value="Seleccionar">Seleccionar</option>
+    
+
+   <div>
+    <div class="row">
+    <div class="col-md-4">
+    <div class="was-validated">
+    <label for="pregunta" class="form-label">¿Por qué vas a diligenciar el formulario?</label>
+    <select name="¿Por qué vas a diligenciar el formulario?" id="Razones" class="form-select" required>
+        <option value="Seleccionar" selected disabled>Seleccionar</option>
         <option value="Solicitar Beneficio">Solicitar Beneficio</option>
         <option value="Actualizar información">Actualizar información</option>
-    </select></div>
-    
-    <div class="identificación"><label for="Tipo_documento">Tipo de documento</label>
-    <select name="Tipo_documento" id="Tipo_documento">
-        <option value="Seleccionar">Seleccionar</option>
+    </select>
+
+    </div></div></div>
+    <div class="identificación">
+        <div class="was-validated">
+        <div class="row mb-3">
+        <div class="col-md-6">
+        <label for="Tipo_documento" class="form-label">Tipo de documento</label>
+        <select name="Tipo_documento" id="Tipo_documento" class="form-select" required>
+        <option value="Seleccionar" selected disabled>Seleccionar</option>
         <option value="CC">CC</option>
         <option value="TI">TI</option>
         <option value="RC">RC</option>
@@ -64,38 +75,54 @@
         <option value="PED">PED</option>
         <option value="CE">CE</option>
     </select>
+        </div>
+    <div class="col-md-6">
     <label for="Numero_documento">Número de documento</label>
-    <input type="number" id="Numero_documento" name="Numero_documento" min="5" max="15">
+    <input type="number" id="Numero_documento" name="Numero_documento" class="form-control" min="5" max="15">
+    </div></div></div></div></div>
+    <div class="nombre">
+    <div class="row mb-3">
+    <div class="col-md-3">
+    <label for="Primer_nombre">Primer nombre</label>
+    <input type="text" id="Primer_nombre" name="Primer_nombre" class="form-control" required>
     </div>
-
-    <div class="nombre"><label for="Primer_nombre">Primer nombre</label>
-    <input type="text" id="Primer_nombre" name="Primer_nombre" required>
+    <div class="col-md-3">    
     <label for="Segundo_nombre">Segundo nombre</label>
-    <input type="text" id="Segundo_nombre" name="Segundo_nombre" required>
+    <input type="text" id="Segundo_nombre" name="Segundo_nombre" class="form-control" required>
+</div>
+    <div class="col-md-3">  
     <label for="Primer_apellido">Primer apellido</label>
-    <input type="text" id="Primer_apellido" name="Primer_apellido" required>
+    <input type="text" id="Primer_apellido" name="Primer_apellido" class="form-control" required>
+</div>
+    <div class="col-md-3">
     <label for="Segundo_apellido">Segundo apellido</label>
-    <input type="text" id="Segundo_apellido" name="Segundo_apellido" required></div>
-    <div></div><label for="Nombres_apellidos">NOMBRES Y APELLIDOS (como esta marcada la CÍVICA)</label>
-    <input type="text" id="Nombres_apellidos" name="Nombres_apellidos" required>
+    <input type="text" id="Segundo_apellido" name="Segundo_apellido" class="form-control" required>
+    </div></div>
+    <div class="col-md-12"><label for="Nombres_apellidos">NOMBRES Y APELLIDOS (como esta marcada la CÍVICA)</label>
+    <input type="text" id="Nombres_apellidos" name="Nombres_apellidos" class="form-control" required>
     
-    <div></div><label for="Género">Género</label>
-    <select name="Género" id="Género">
-        <option value="Seleccionar">Seleccionar</option>
+    <div class="col-md-12"><label for="genero">Género</label>
+    <select name="genero" id="genero" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
         <option value="MASCULINO">MASCULINO</option>
         <option value="FEMENINO">FEMENINO</option>
         <option value="OTRAS">OTRAS</option>
-    </select>
+    </select></div>
     
-    <label for="Cuál?">Cuál?</label>
-    <input type="text" id="Cuál?" name="Cuál?">
-    
-    ¿Cuál es la dirección de su residencia?
-    
+    <div class="col-md-6">
+    <label for="Cual">Cuál?</label>
+    <input type="text" id="cual" name="cual" class="form-control" disabled>
+    </div>
+    <p> ¿Cuál es la dirección de su residencia?</p>
+       
+
+
     <div class="dirección">
-        
+        <div class="was-validated">
+            <div class="row mb-3">
+                <div class="col-md-3">
         <label for="viaPrincipal">Vía principal</label>
-    <select name="viaPrincipal" id="viaPrincipal">
+    <select name="viaPrincipal" id="viaPrincipal" class="form-select">
         <option value="AUTOPISTA">AUTOPISTA</option>
         <option value="AVENIDA">AVENIDA</option>
         <option value="AVENIDA CALLE">AVENIDA CALLE</option>
@@ -115,47 +142,68 @@
         <option value="TRONCAL">TRONCAL</option>
         <option value="VARIANTE">VARIANTE</option>
         <option value="VIA">VIA</option>
-</select>
+</select></div>
+    <div class="col-md-3">
     <label for="numero">NÚMERO</label>
-    <input type="number" id="numero" name="numero" required>
+    <input type="number" id="numero" name="numero" class="form-control" required>
+    </div>
+    <div class="col-md-3">
     <label for="prefijo1">Prefijo</label>
-    <input type="text" id="prefijo1" name="prefijo1" required>
-        
-    <label for="nombreVia">Nombre vía</label>
-        <select name="nombreVia" id="nombreVia">
-        <option value="Seleccione">Seleccione</option>
+    <input type="text" id="prefijo1" name="prefijo1" class="form-control" required>
+    </div>
+    <div class="col-md-2">
+    <label for="nombreVia">Nombre vía </label>
+        <select name="nombreVia" id="nombreVia" class="form-select">
+        <option value="" selected disabled>Seleccione</option>
         <option value="BIS">BIS</option>
         <option value="ESTE">ESTE</option>
         <option value="NORTE">NORTE</option>
         <option value="OESTE">OESTE</option>
         <option value="SUR">SUR</option>
-    </select>
-
-    <label for="viaSecundaria">VÍA SECUNDARIA</label>
-    <input type="number" id="viaSecundaria" name="viaSecundaria" required>
+    </select></div>#</div></div>
+    
+    <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="was-validated">
+        <label for="viaSecundaria">Vía secundaria</label>
+        <input type="number" id="viaSecundaria" name="viaSecundaria" class="form-control" required>    
+    </div></div>
+            <div class="col-md-3">
+                <div class="was-validated">
     <label for="prefijo2">Prefijo</label>
-    <input type="text" id="prefijo2" name="prefijo2" required>
+    <input type="text" id="prefijo2" name="prefijo2" class="form-control" required>
+            </div></div>
+            <div class="col-md-3">
     <label for="cuadrante">Cuadrante</label>
-    <select name="cuadrante" id="cuadrante">
-        <option value="Seleccione">Seleccione</option>
+    <select name="cuadrante" id="cuadrante" class="form-select" required>
+        <option value="" selected disabled>Seleccione</option>
         <option value="BIS">BIS</option>
         <option value="ESTE">ESTE</option>
         <option value="NORTE">NORTE</option>
         <option value="OESTE">OESTE</option>
         <option value="SUR">SUR</option>
     </select>
-    <label for="placa">Placa</label>
-    <input type="number" id="placa" name="placa" required>
-    <label for="complemento">Complemento</label>
-    <input type="text" id="complemento" name="complemento"></label>
-   
-   
-<div id="direccionCompleta">Dirección completa: </div>
-     <input type="text" id="direccionCompletaInput" name="direccionCompleta" readonly> 
 </div>
+        <div class="col-md-3">
+            <div class="was-validated">
+    <label for="placa">Placa</label>
+    <input type="number" id="placa" name="placa" class="form-control" required>
+            </div></div></div>
+            
+            <div class="row mb-12">
+                <div class="col-md"
+    <label for="complemento">Complemento</label>
+    <input type="text" id="complemento" name="complemento" class="form-control"></label>
+        </div></div></div>
+   
+<div id="direccionCompleta">Dirección completa:</div>
+     <input type="text" id="direccion_Completa" name="direccionCompleta" class="form-control" readonly> </div>
+   
+        <div class="col-md-3">
+            <div class="was-validated">
     <label for="Municipio_de_residencia">Municipio de residencia</label>
-    <select name="Municipio_de_residencia" id="Municipio_de_residencia">
-        <option value="Seleccionar">Seleccionar</option>
+    <select name="Municipio_de_residencia" id="Municipio_de_residencia" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
         <option value="BARBOSA">BARBOSA</option>
         <option value="BELLO">BELLO</option>
         <option value="CALDAS">CALDAS</option>
@@ -166,22 +214,28 @@
         <option value="MEDELLÍN">MEDELLÍN</option>
         <option value="SABANETA">SABANETA</option>
     </select>
-
-    <div class="container mt-1">
-            <div class="col-md-4 offset-md">
-    <div class="form-group mb-3">
+        </div></div>
+        
+        <div class="row g-2 align-items-center mb-3"> 
+            <div class="col-md-4"> 
+                <div class="was-validated">
+                <div class="form-group mb-0">
         <label for="Fecha_de_nacimiento">Fecha de nacimiento</label>
     <input type="date" id="Fecha_de_nacimiento" name="Fecha_de_nacimiento" class="form-control">
-    </div>
+    </div></div></div>
+    <div class="col-md-4">
     <div class="alert alert-info">
         Edad: <span id="resultadoEdad" class="fw-bold">0</span> años
-                </div>
-            </div>
-        </div>
- <script src="Javascript/script.js"></script>
+                </div></div>
+        </div></div>
+ <script src="script.js"></script>
     
-    <div class="relevante"><label for="Estrato_Socioeconómico">Estrato socioeconómico</label>
-    <select name="Estrato_socioeconómico" id="Estrato_Socioeconómico" required>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="was-validated">
+                <div class="relevante">
+        <label for="Estrato_Socioeconómico">Estrato socioeconómico</label>
+    <select name="Estrato_socioeconómico" id="Estrato_Socioeconómico" class="form-select" required>
         <option value="Seleccionar">Seleccionar</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -190,49 +244,71 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
-    
-    <label for="Nivel_o_puntaje_del_SISBEN">Puntaje del SISBEN</label>
-    <select name="Nivel_o_puntaje_del_SISBEN" id="Nivel_o_puntaje_del_SISBEN" required>
+</div></div>
+        </div>
+        <div class="col-md-4">
+                    <div class="was-validated">    
+                <label for="Nivel_o_puntaje_del_SISBEN">Puntaje SISBEN</label>
+    <select name="Nivel_o_puntaje_del_SISBEN" id="Nivel_o_puntaje_del_SISBEN" class="form-select" required>
         <option value="Seleccionar">Seleccionar</option>
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
         <option value="D">D</option>
         <option value="No_tiene">No tiene</option>
-    </select>
+    </select></div></div>
     
+    <div class="col-md-4">
+        <div class="was-validated">
     <label for="Teléfono_Célular">Teléfono célular</label>
-    <input type="number" name="Teléfono_célular" id="Teléfono_célular" max="10" required></div>
-    
-    <div class="escolar"><label for="Nivel_académico">Nivel académico</label>
-    <select name="Nivel_académico" id="Nivel_académico">
+    <input type="number" name="Teléfono_célular" id="Teléfono_célular" max="10" class="form-select" required>
+        </div></div>
+
+    <div class="row mb-12">
+        <div class="col-md-4">
+    <div class="was-validated">
+        <div class="escolar">
+        <label for="Nivel_académico">Nivel académico</label>
+    <select name="Nivel_académico" id="Nivel_académico" class="form-select" required>
         <option value="Seleccionar"></option>
         <option value="PRIMARIA">PRIMARIA</option>
         <option value="SECUNDARIA">SECUNDARIA</option>
         <option value="MEDIA">MEDIA</option>
         <option value="SUPERIOR">SUPERIOR</option>
-    </select>
+    </select></div></div></div>
+<div class="col-md-4">
+    <div class="was-validated">
     <label for="Grado">Grado</label>
-    <select name="Grado" id="Grado" required>
+    <select name="Grado" id="Grado" class="form-select" required>
         <option value="Seleccionar">Seleccionar</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-</select></div>
+</select></div></div>
     
-<label for="Número_de_cívica_personalizada">Número de cívica personalizada</label>
-<input type="number" name="Número_de_cívica_personalizada" id="Número_de_cívica_personalizada" min="5" max="15" required>
+<div class="row mb-12">
+    <div class="col-md-4">
+    <div class="was-validated">
+<label for="Número_de_cívica_personalizada">Número cívica personalizada</label>
+<input type="number" name="Número_de_cívica_personalizada" id="Número_de_cívica_personalizada" min="5" max="15" class="form-control" required>
+        </div></div>
 
+<div class="col-md-4">
+    <div class="was-validated">
     <label for="¿Presenta_Discapacidad?">¿Presenta Discapacidad?</label>
-    <select name="¿Presenta_Discapacidad?" id="¿Presenta_Discapacidad?">
-        <option value="Seleccionar">Seleccionar</option>
+    <select name="¿Presenta_Discapacidad?" id="¿Presenta_Discapacidad?" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
         <option value="SI">SI</option>
         <option value="NO">NO</option>
     </select>
+</div></div></div></div></div>
+<div class="row mb-12">
+    <div class="col-md-4">
+    <div class="was-validated">
     <label for="¿Qué_beneficio_tiene_activo_con_Sapiencia?">¿Qué beneficio tiene activo con sapiencia?</label>
-    <select name="¿Qué_beneficio_tiene_activo_con_Sapiencia?" id="¿Qué_beneficio_tiene_activo_con_Sapiencia?">
+    <select name="¿Qué_beneficio_tiene_activo_con_Sapiencia?" id="¿Qué_beneficio_tiene_activo_con_Sapiencia?" class="form-select">
         <option value="Seleccionar">Seleccionar</option>
         <option value="VISION4RIOS">VISION4RIOS</option>
         <option value="MATRICULA_CERO">MATRICULA CERO</option>
@@ -242,13 +318,13 @@
         <option value="MEJORES DEPORTISTAS">MEJORES DEPORTISTAS</option>
         <option value="@MEDELLÍN">@MEDELLÍN</option>
         <option value="BILINGÜISMO">BILINGÜISMO</option>
-    </select></form>
-</div>
+    </select></div></div></div></form>
+
     
     
     <div class="botón_adjunto">
-        <button onclick="window.modal1.showModal();">Copia del documento de identificación</button>
-    <dialog id="modal1">
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal1.showModal();">Copia del documento de identificación</button>
+        <dialog id="modal1">
         <p>Adjunta copia documento de identidad</p>
         <label for="Elegir_archivo">Elegir archivo</label>
         <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
@@ -257,7 +333,7 @@
         </form>
         <button onclick="window.modal1.close();">Salir</button>
     </dialog>
-        <button onclick="window.modal2.showModal();">Copia de servicios públicos domiciliarios</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal2.showModal();">Copia de servicios públicos domiciliarios</button>
     <dialog id="modal2">
         <p>Adjuntar copia de servicios públicos domiciliarios</p>
         <label for="Elegir_archivo">Elegir archivo</label>
@@ -267,7 +343,7 @@
         </form>
         <button onclick="window.modal2.close();">Salir</button>
     </dialog>
-    <button onclick="window.modal3.showModal();">Copia de la tarjeta cívica</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="window.modal3.showModal();">Copia de la tarjeta cívica</button>
     <dialog id="modal3">
         <p>Adjuntar Copia de la tarjeta cívica</p>
         <label for="Elegir_archivo">Elegir archivo</label>
@@ -277,7 +353,7 @@
         </form>
         <button onclick="window.modal3.close();">Salir</button>
         </dialog>
-        <button onclick="window.modal4.showModal();">Certificado de discapacidad o historia clínica</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal4.showModal();">Certificado de discapacidad o historia clínica</button>
     <dialog id="modal4">
         <p>Adjuntar Certificado de discapacidad o historia clínica</p>
         <label for="Elegir_archivo">Elegir archivo</label>
@@ -324,11 +400,12 @@ Atención al Cliente -PAC- del Metro de Medellín, para reportar su perdida y re
             (+57 4) 4447947.</p>
     </ol>
     <p>PARÁGRAFO: con la suscripción de este formulario se entiende aceptada la finalidad del tratamiento de datos y que conoce los mecanismos para su protección.</p>
-<input type="checkbox" id="acepto" name="terminos" value="acepto">
-<label for="acepto">Acepto términos y condiciones></label>
-
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" id="acepto" name="terminos" value="acepto">
+<label class="form-check-label" for="acepto">Acepto términos y condiciones></label>
+</div>
 <form action="/enviar" method="post">
-    <div class="enviar"><button type="submit">Enviar</button></div></div></form></form>
+    <div class="enviar"><button type="button" class="btn btn-primary btn-lg" ">Enviar</button></div></div></form></form>
 
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
