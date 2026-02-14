@@ -24,9 +24,9 @@
     <li>Si eres beneficiario de Sapiencia, ya sea por medio de Fondos en programas de pregrado o posgrado, o a través de la Matrícula Cero, tienes la posibilidad de acceder al perfil preferencial en tu tarjeta cívica del Metro de Medellín.</li>
     <li>Residir en viviendas de estratos 1, 2 y 3.</li>
     <li>Tener entre 10 y hasta 28 años en el momento de la inscripción, o ser una persona con discapacidad.</li>
-   </ul>
+</ul>
     <p>Es importante aclarar que, dentro de los medios de transporte que cubre este beneficio, se encuentran todos aquellos en los cuales se hace uso de la tarjeta cívica de los vehículos del sistema de Transporte masivo, de la Empresa Metro de Medellín Ltda.</p>
-   <ul>
+<ul>
     <li>Metro</li>
     <li>Metro Cable</li>
     <li>MetroPlus</li>
@@ -38,31 +38,34 @@
     No aplican dado que éstos pertenecen a empresas privadas que presten el servicio de articulación a la red del Sistema Metro.
     Nota: Sapiencia solo hace el reporte de la presente solicitud a la SECRETARIA DE EDUCACIÓN DEL DISTRITO ESPECIAL DE CIENCIA, 
     TECNOLOGÍA E INNOVACIÓN DE MEDELLÍN y posteriormente son ellos quienes hacen la validación final de requisitos y reportan oficialmente al METRO. CIRCULAR NÚMERO 202460000077 DE 02/04/2024
-</p></div></div>
+</p>
+
+</div>
 
 <div class="Preguntas_formulario">   
     <h2>Formulario de solicitud</h2>
 <p>Es indispensable para la solicitud del beneficiario diligenciar completamente este Formulario</p>
 <form action="/enviar-respuesta" method="post">
     
-
-   <div>
-    <div class="row">
-    <div class="col-md-4">
-    <div class="was-validated">
-    <label for="pregunta" class="form-label">¿Por qué vas a diligenciar el formulario?</label>
+<div class="row mb-3 d-flex align-items-stretch">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="pb-2">
+                <div class="was-validated">
+    <label for="pregunta" class="form-label mb-2">¿Por qué vas a diligenciar el formulario?</label>
     <select name="¿Por qué vas a diligenciar el formulario?" id="Razones" class="form-select" required>
         <option value="Seleccionar" selected disabled>Seleccionar</option>
         <option value="Solicitar Beneficio">Solicitar Beneficio</option>
         <option value="Actualizar información">Actualizar información</option>
-    </select>
-
-    </div></div></div>
-    <div class="identificación">
-        <div class="was-validated">
-        <div class="row mb-3">
+            </select>
+        </div>
+    </div>
+</div>
+    
+    <div class="row mb-3">
         <div class="col-md-6">
-        <label for="Tipo_documento" class="form-label">Tipo de documento</label>
+            <div class="pb-2 was-validated">
+        <label for="Tipo_documento" class="form-label mb-2">Tipo de documento</label>
         <select name="Tipo_documento" id="Tipo_documento" class="form-select" required>
         <option value="Seleccionar" selected disabled>Seleccionar</option>
         <option value="CC">CC</option>
@@ -74,55 +77,87 @@
         <option value="PAP">PAP</option>
         <option value="PED">PED</option>
         <option value="CE">CE</option>
-    </select>
+            </select>
         </div>
-    <div class="col-md-6">
-    <label for="Numero_documento">Número de documento</label>
-    <input type="number" id="Numero_documento" name="Numero_documento" class="form-control" min="5" max="15">
-    </div></div></div></div></div>
-    <div class="nombre">
-    <div class="row mb-3">
-    <div class="col-md-3">
-    <label for="Primer_nombre">Primer nombre</label>
-    <input type="text" id="Primer_nombre" name="Primer_nombre" class="form-control" required>
     </div>
-    <div class="col-md-3">    
-    <label for="Segundo_nombre">Segundo nombre</label>
+
+    <div class="col-md-6">
+        <div class="pb-2 was-validated">
+        <label for="Numero_documento" class="form-label mb-2">Número de documento</label>
+    <input type="number" id="Numero_documento" name="Numero_documento" class="form-control" min="5" max="15">
+            </div>
+        </div>
+    </div>
+
+    <div class="nombre">
+        <div class="row mb-3">
+            <div class="col-md-3">
+                    <div class="pb-2 was-validated">
+    <label for="Primer_nombre" class="form-label mb-2">Primer nombre</label>
+    <input type="text" id="Primer_nombre" name="Primer_nombre" class="form-control" required>
+        </div>
+    </div>
+    <div class="col-md-3"> 
+            <div class="pb-2 was-validated">
+    <label for="Segundo_nombre" class="form-label mb-2">Segundo nombre</label>
     <input type="text" id="Segundo_nombre" name="Segundo_nombre" class="form-control" required>
+    </div>
 </div>
-    <div class="col-md-3">  
-    <label for="Primer_apellido">Primer apellido</label>
+        <div class="col-md-3">  
+            <div class="pb-2 was-validated">
+        <label for="Primer_apellido" class="form-label mb-2">Primer apellido</label>
     <input type="text" id="Primer_apellido" name="Primer_apellido" class="form-control" required>
-</div>
+        </div>
+    </div>     
     <div class="col-md-3">
-    <label for="Segundo_apellido">Segundo apellido</label>
+        <div class="pb-2 was-validated">
+        <label for="Segundo_apellido" class="form-label mb-2">Segundo apellido</label>
     <input type="text" id="Segundo_apellido" name="Segundo_apellido" class="form-control" required>
-    </div></div>
-    <div class="col-md-12"><label for="Nombres_apellidos">NOMBRES Y APELLIDOS (como esta marcada la CÍVICA)</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="pb-2 was-validated">
+            <div class="col-md-12">
+        <label for="Nombres_apellidos" class="form-label mb-2">Nombres y apellidos (como esta marcada la CÍVICA)</label>
     <input type="text" id="Nombres_apellidos" name="Nombres_apellidos" class="form-control" required>
-    
-    <div class="col-md-12"><label for="genero">Género</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="pb-2 was-validated">
+        <label for="genero" class="form-label mb-2">Género</label>
     <select name="genero" id="genero" class="form-select">
         <option value="" selected disabled>Seleccionar</option>
         <option value="MASCULINO">MASCULINO</option>
         <option value="FEMENINO">FEMENINO</option>
         <option value="OTRAS">OTRAS</option>
-    </select></div>
-    
-    <div class="col-md-6">
-    <label for="Cual">Cuál?</label>
-    <input type="text" id="cual" name="cual" class="form-control" disabled>
+            </select>
+        </div>
     </div>
-    <p> ¿Cuál es la dirección de su residencia?</p>
-       
-
+</div> 
+    
+<div class="col-md-6">
+    <div class="pb-2 was-validated"
+    <label for="Cual" class="form-label mb-2">Cuál?</label>
+    <input type="text" id="cual" name="cual" class="form-control" disabled required>
+            </div>
+        </div>
+    </div>
+<div class="mb-3">
+    <p class="mb-2">¿Cuál es la dirección de su residencia?</p>
+</div>
 
     <div class="dirección">
-        <div class="was-validated">
             <div class="row mb-3">
                 <div class="col-md-3">
-        <label for="viaPrincipal">Vía principal</label>
+                    <div class="pb-2 was-validated">
+        <label for="viaPrincipal" class="form-label mb-2">Vía principal</label>
     <select name="viaPrincipal" id="viaPrincipal" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
         <option value="AUTOPISTA">AUTOPISTA</option>
         <option value="AVENIDA">AVENIDA</option>
         <option value="AVENIDA CALLE">AVENIDA CALLE</option>
@@ -142,17 +177,24 @@
         <option value="TRONCAL">TRONCAL</option>
         <option value="VARIANTE">VARIANTE</option>
         <option value="VIA">VIA</option>
-</select></div>
+        </select>
+    </div>
+</div>
     <div class="col-md-3">
-    <label for="numero">NÚMERO</label>
+        <div class="pb-2 was-validated">
+    <label for="numero" class="form-label mb-2">Número</label>
     <input type="number" id="numero" name="numero" class="form-control" required>
     </div>
+</div>
     <div class="col-md-3">
-    <label for="prefijo1">Prefijo</label>
+        <div class="pb-2 was-validated">
+    <label for="prefijo1" class="form-label mb-2">Prefijo</label>
     <input type="text" id="prefijo1" name="prefijo1" class="form-control" required>
     </div>
-    <div class="col-md-2">
-    <label for="nombreVia">Nombre vía </label>
+</div>
+    <div class="col-md-3">
+        <div class="pb-2 was-validated">
+    <label for="nombreVia" class="form-label mb-2">Nombre vía </label>
         <select name="nombreVia" id="nombreVia" class="form-select">
         <option value="" selected disabled>Seleccione</option>
         <option value="BIS">BIS</option>
@@ -160,7 +202,10 @@
         <option value="NORTE">NORTE</option>
         <option value="OESTE">OESTE</option>
         <option value="SUR">SUR</option>
-    </select></div>#</div></div>
+        </select>
+        </div>
+    </div>
+</div>
     
     <div class="row mb-3">
             <div class="col-md-3">
@@ -308,8 +353,8 @@
     <div class="col-md-4">
     <div class="was-validated">
     <label for="¿Qué_beneficio_tiene_activo_con_Sapiencia?">¿Qué beneficio tiene activo con sapiencia?</label>
-    <select name="¿Qué_beneficio_tiene_activo_con_Sapiencia?" id="¿Qué_beneficio_tiene_activo_con_Sapiencia?" class="form-select">
-        <option value="Seleccionar">Seleccionar</option>
+    <select name="¿Qué_beneficio_tiene_activo_con_Sapiencia?" id="¿Qué_beneficio_tiene_activo_con_Sapiencia?" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
         <option value="VISION4RIOS">VISION4RIOS</option>
         <option value="MATRICULA_CERO">MATRICULA CERO</option>
         <option value="FONDOS_PREGRADO">FONDOS PREGRADO</option>
@@ -318,7 +363,7 @@
         <option value="MEJORES DEPORTISTAS">MEJORES DEPORTISTAS</option>
         <option value="@MEDELLÍN">@MEDELLÍN</option>
         <option value="BILINGÜISMO">BILINGÜISMO</option>
-    </select></div></div></div></form>
+    </select></div></div></div></form></div></div>
 
     
     
@@ -328,12 +373,13 @@
         <p>Adjunta copia documento de identidad</p>
         <label for="Elegir_archivo">Elegir archivo</label>
         <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
-        <input type="file" id="Elegir_archivo" name="Elegir_archivo" accept=".pdf,.jpg,.png" required>
+        <input type="file" id="Elegir_archivo" name="Elegir_archivo" accept=".pdf,.jpg,.png">
         <button type="submit">Subir archivo</button>
         </form>
         <button onclick="window.modal1.close();">Salir</button>
     </dialog>
-        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal2.showModal();">Copia de servicios públicos domiciliarios</button>
+
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal2.showModal();" required>Copia de servicios públicos domiciliarios</button>
     <dialog id="modal2">
         <p>Adjuntar copia de servicios públicos domiciliarios</p>
         <label for="Elegir_archivo">Elegir archivo</label>
