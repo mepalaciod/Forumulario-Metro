@@ -156,7 +156,7 @@
                 <div class="col-md-3">
                     <div class="pb-2 was-validated">
         <label for="viaPrincipal" class="form-label mb-2">Vía principal</label>
-    <select name="viaPrincipal" id="viaPrincipal" class="form-select">
+    <select name="viaPrincipal" id="viaPrincipal" class="form-select" required>
         <option value="" selected disabled>Seleccionar</option>
         <option value="AUTOPISTA">AUTOPISTA</option>
         <option value="AVENIDA">AVENIDA</option>
@@ -189,7 +189,7 @@
     <div class="col-md-3">
         <div class="pb-2 was-validated">
     <label for="prefijo1" class="form-label mb-2">Prefijo</label>
-    <input type="text" id="prefijo1" name="prefijo1" class="form-control" required>
+    <input type="text" id="prefijo1" name="prefijo1" class="form-control">
     </div>
 </div>
     <div class="col-md-3">
@@ -215,14 +215,14 @@
 </div>
             <div class="col-md-3">
                 <div class="pb-2 was-validated">
-    <label for="prefijo2">Prefijo</label>
-    <input type="text" id="prefijo2" name="prefijo2" class="form-control" required>
+    <label for="prefijo2" class="form-label mb-2">Prefijo</label>
+    <input type="text" id="prefijo2" name="prefijo2" class="form-control">
             </div>
         </div>
             <div class="col-md-3">
                 <div class="pb-2 was-validated">
     <label for="cuadrante" class="form-label mb-2">Cuadrante</label>
-    <select name="cuadrante" id="cuadrante" class="form-select" required>
+    <select name="cuadrante" id="cuadrante" class="form-select" >
         <option value="" selected disabled>Seleccione</option>
         <option value="BIS">BIS</option>
         <option value="ESTE">ESTE</option>
@@ -235,21 +235,18 @@
         <div class="col-md-3">
             <div class="pb-2 was-validated">
     <label for="placa" class="form-label mb-2">Placa</label>
-    <input type="number" id="placa" name="placa" class="form-control" required>
+    <input type="number" id="placa" name="placa" class="form-control">
             </div>
         </div>
     </div>
-</div>      
-        <div class="row mb-3">
+</div>                  
+<div class="col-md-12">
             <div class="pb-2 was-validated">
-                <div class="col-md-12">
     <label for="complemento" class="form-label mb-2">Complemento</label>
     <input type="text" id="complemento" name="complemento" class="form-control"></label>
         </div>
     </div>
-</div>
-            <div class="row mb-12">
-                <div class="col-md">
+                <div class="col-md-12">
             <div class="pb-2 was-validated"> 
                 <div id="direccionCompleta" class="form-label mb-2">Dirección completa:
                 <input type="text" id="direccion_Completa" name="direccionCompleta" class="form-control" readonly> 
@@ -257,10 +254,10 @@
         </div>
     </div>
 </div>
-   
-        <div class="col-md-3">
-            <div class="was-validated">
-    <label for="Municipio_de_residencia">Municipio de residencia</label>
+        <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="pb-2 was-validated">
+    <label for="Municipio_de_residencia" class="form-label mb-2">Municipio de residencia</label>
     <select name="Municipio_de_residencia" id="Municipio_de_residencia" class="form-select">
         <option value="" selected disabled>Seleccionar</option>
         <option value="BARBOSA">BARBOSA</option>
@@ -273,13 +270,14 @@
         <option value="MEDELLÍN">MEDELLÍN</option>
         <option value="SABANETA">SABANETA</option>
     </select>
-        </div></div>
-        
+        </div>
+    </div>
+        </div>      
         <div class="row g-2 align-items-center mb-3"> 
-            <div class="col-md-4"> 
-                <div class="was-validated">
+            <div class="col-md-4">
+                <div class="p-2 was-validated">
                 <div class="form-group mb-0">
-        <label for="Fecha_de_nacimiento">Fecha de nacimiento</label>
+        <label for="Fecha_de_nacimiento" class="form-label mb-2">Fecha de nacimiento</label>
     <input type="date" id="Fecha_de_nacimiento" name="Fecha_de_nacimiento" class="form-control">
     </div></div></div>
     <div class="col-md-4">
@@ -290,12 +288,12 @@
  <script src="script.js"></script>
     
     <div class="row mb-3">
-        <div class="col-md-4">
-            <div class="was-validated">
-                <div class="relevante">
-        <label for="Estrato_Socioeconómico">Estrato socioeconómico</label>
-    <select name="Estrato_socioeconómico" id="Estrato_Socioeconómico" class="form-select" required>
-        <option value="Seleccionar">Seleccionar</option>
+            <div class="col-md-4">
+                <div class="pb-2 was-validated">
+                            <div class="relevante">
+        <label for="Estrato_Socioeconómico" class="form-label mb-2">Estrato socioeconómico</label>
+            <select name="Estrato_socioeconómico" id="Estrato_Socioeconómico" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -303,70 +301,76 @@
         <option value="5">5</option>
         <option value="6">6</option>
     </select>
-</div></div>
         </div>
+    </div>
+</div>
         <div class="col-md-4">
-                    <div class="was-validated">    
-                <label for="Nivel_o_puntaje_del_SISBEN">Puntaje SISBEN</label>
+            <div class="pb-2 was-validated">    
+                <label for="Nivel_o_puntaje_del_SISBEN" class="form-label mb-2">Puntaje SISBEN</label>
     <select name="Nivel_o_puntaje_del_SISBEN" id="Nivel_o_puntaje_del_SISBEN" class="form-select" required>
-        <option value="Seleccionar">Seleccionar</option>
+        <option value="" selected disabled>Seleccionar</option>
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
         <option value="D">D</option>
         <option value="No_tiene">No tiene</option>
-    </select></div></div>
+    </select>
+    </div>
+</div>
     
     <div class="col-md-4">
         <div class="was-validated">
-    <label for="Teléfono_Célular">Teléfono célular</label>
-    <input type="number" name="Teléfono_célular" id="Teléfono_célular" max="10" class="form-select" required>
-        </div></div>
-
-    <div class="row mb-12">
+    <label for="Teléfono_Célular" class="form-label mb-2">Teléfono célular</label>
+    <input type="number" name="Teléfono_célular" id="Teléfono_célular" max="10" class="form-control" required>
+        </div>
+    </div>
+</div>
+    <div class="row mb-3">
         <div class="col-md-4">
-    <div class="was-validated">
+    <div class="pb-2 was-validated">
         <div class="escolar">
-        <label for="Nivel_académico">Nivel académico</label>
+        <label for="Nivel_académico" class="form-label mb-2">Nivel académico</label>
     <select name="Nivel_académico" id="Nivel_académico" class="form-select" required>
-        <option value="Seleccionar"></option>
+        <option value="" selected disabled></option>Seleccionar</option>
         <option value="PRIMARIA">PRIMARIA</option>
         <option value="SECUNDARIA">SECUNDARIA</option>
         <option value="MEDIA">MEDIA</option>
         <option value="SUPERIOR">SUPERIOR</option>
     </select></div></div></div>
-<div class="col-md-4">
-    <div class="was-validated">
-    <label for="Grado">Grado</label>
+    <div class="col-md-4">
+        <div class="pb-2 was-validated">
+    <label for="Grado" class="form-label mb-2">Grado</label>
     <select name="Grado" id="Grado" class="form-select" required>
-        <option value="Seleccionar">Seleccionar</option>
+        <option value="" selected disabled>Seleccionar</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-</select></div></div>
-    
-<div class="row mb-12">
+</select>
+</div>
+</div>
+    </div>
+<div class="row mb-3">
     <div class="col-md-4">
-    <div class="was-validated">
-<label for="Número_de_cívica_personalizada">Número cívica personalizada</label>
+    <div class="pb-2 was-validated">
+<label for="Número_de_cívica_personalizada" class="form-label mb-2">Número cívica personalizada</label>
 <input type="number" name="Número_de_cívica_personalizada" id="Número_de_cívica_personalizada" min="5" max="15" class="form-control" required>
         </div></div>
 
 <div class="col-md-4">
-    <div class="was-validated">
-    <label for="¿Presenta_Discapacidad?">¿Presenta Discapacidad?</label>
+    <div class="pb-2 was-validated">
+    <label for="¿Presenta_Discapacidad?" class="form-label mb-2">¿Presenta Discapacidad?</label>
     <select name="¿Presenta_Discapacidad?" id="¿Presenta_Discapacidad?" class="form-select" required>
         <option value="" selected disabled>Seleccionar</option>
         <option value="SI">SI</option>
         <option value="NO">NO</option>
     </select>
-</div></div></div></div></div>
-<div class="row mb-12">
+</div></div></div>
+<div class="row mb-3">
     <div class="col-md-4">
-    <div class="was-validated">
-    <label for="¿Qué_beneficio_tiene_activo_con_Sapiencia?">¿Qué beneficio tiene activo con sapiencia?</label>
+    <div class="pb-2 was-validated">
+    <label for="¿Qué_beneficio_tiene_activo_con_Sapiencia?" class="form-label mb-2">¿Qué beneficio tiene activo con sapiencia?</label>
     <select name="¿Qué_beneficio_tiene_activo_con_Sapiencia?" id="¿Qué_beneficio_tiene_activo_con_Sapiencia?" class="form-select" required>
         <option value="" selected disabled>Seleccionar</option>
         <option value="VISION4RIOS">VISION4RIOS</option>
@@ -382,7 +386,8 @@
     
     
     <div class="botón_adjunto">
-        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal1.showModal();">Copia del documento de identificación</button>
+
+        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target">Copia del documento de identificación</button>
         <dialog id="modal1">
         <p>Adjunta copia documento de identidad</p>
         <label for="Elegir_archivo">Elegir archivo</label>

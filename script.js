@@ -82,3 +82,15 @@ const cual= document.getElementById('cual');
       cual.value = "";
     }
   });
+
+  const fechaNacimiento = document.getElementById("Fecha_de_nacimiento"); 
+  const resultadoEdad = document.getElementById("resultadoEdad"); 
+  Fecha_de_nacimiento.addEventListener("change", () => 
+    { 
+    const hoy = new Date(); 
+    const nacimiento = new Date(Fecha_de_nacimiento.value); let edad = hoy.getFullYear() - nacimiento.getFullYear(); 
+    const mes = hoy.getMonth() - nacimiento.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) { edad--; } 
+    if (edad < 0) { edad = 0; } 
+    if (edad > 100) { edad = 100; }
+    resultadoEdad.textContent = edad; });
