@@ -10,15 +10,15 @@ body {
     height: auto;
     font-family:'Poppins',sans-serif;
     font-size: 18px;
-    h1 {color:orange;
+    h1 {color:black;
     font-family:'Poppins',sans-serif;
     text-align: center;}
-    p {color:brown;}
-    ul {color:brown;}
+    p {color:black;}
+    ul {color:black;}
     border: 2px yellow solid;
     width: auto;
     margin: 20px;
-    background-color: #f9ff8b;
+    background-color: #fff3cd;
     text-align: justify;
     padding: 30px;
 
