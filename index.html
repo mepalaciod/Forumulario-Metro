@@ -255,7 +255,7 @@
     </div>
 </div>
         <div class="row mb-3">
-        <div class="col-md-12">
+        <div class="col-md-4">
             <div class="pb-2 was-validated">
     <label for="Municipio_de_residencia" class="form-label mb-2">Municipio de residencia</label>
     <select name="Municipio_de_residencia" id="Municipio_de_residencia" class="form-select">
@@ -272,7 +272,25 @@
     </select>
         </div>
     </div>
-        </div>      
+            <div class="col-md-4">
+                <div class="pb-2 was-validated">
+    <label for="comuna_o_corregimiento" class="form-label mb-2">Comuna donde vive</label>
+    <select name="comuna_o_corregimiento" id="comuna_corregimiento" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+    </select>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="pb-2 was-validated">
+    <label for="barrio_donde_vive" class="form-label mb-2">Barrio donde vive</label>
+    <select name="barrio_donde_vive" id="barrio_donde_vive" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+    </select>
+            </div>
+            </div>
+        </div>
+
         <div class="row g-2 align-items-center mb-3"> 
             <div class="col-md-4">
                 <div class="p-2 was-validated">
@@ -325,7 +343,7 @@
     </div>
 </div>
     <div class="row mb-3">
-        <div class="col-md-3">
+        <div class="col-md-4">
     <div class="pb-2 was-validated">
         <div class="escolar">
         <label for="Nivel_academico" class="form-label mb-2">Nivel académico</label>
@@ -339,18 +357,18 @@
         </div>
     </div>
 </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="pb-2 was-validated">
+            <div id="gradoContainer">
     <label for="Grado" class="form-label mb-2">Grado</label>
     <select name="Grado" id="Grado" class="form-select" required>
         <option value="" selected disabled>Seleccionar</option>
     </select>
+            </div>
 </div>
 </div>
-    </div>
 
-    <div class="col-md-3" 
-    id="semestreContainer" style="display:none;"> 
+    <div class="col-md-4" id="semestreContainer" style="display:none;"> 
         <div class="pb-2 was-validated"> 
             <label for="Semestre" class="form-label mb-2">Semestre</label> 
             <select id="Semestre" name="Semestre" class="form-select"> 
@@ -368,6 +386,7 @@
             </select> 
         </div> 
     </div> 
+    </div>
 <div class="row mb-3">
     <div class="col-md-4">
     <div class="pb-2 was-validated">
@@ -377,13 +396,26 @@
 
 <div class="col-md-4">
     <div class="pb-2 was-validated">
-    <label for="¿Presenta_Discapacidad?" class="form-label mb-2">¿Presenta Discapacidad?</label>
-    <select name="¿Presenta_Discapacidad?" id="¿Presenta_Discapacidad?" class="form-select" required>
+    <label for="Presenta_Discapacidad" class="form-label mb-2">¿Presenta Discapacidad?</label>
+    <select name="Presenta_Discapacidad" id="Presenta_Discapacidad" class="form-select" required>
         <option value="" selected disabled>Seleccionar</option>
         <option value="SI">SI</option>
         <option value="NO">NO</option>
     </select>
-</div></div></div>
+</div></div>
+<div class="col-md-4" id="Tipo_de_discapacidadContainer" style="display:none;">
+    <div class="pb-2 was-validated">
+    <label for="Tipo_de_discapacidad" class="form-label mb-2">Tipo de discapacidad</label>
+    <select name="Tipo_de_discapacidad" id="Tipo_de_discapacidad" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="FISICA">FÍSICA</option>
+        <option value="SENSORIAL">SENSORIAL</option>
+        <option value="INTELECTUAL">INTELECTUAL</option>
+        <option value="PSIQUICA">PSIQUICA</option>
+        <option value="MULTIPLE">MULTIPLE</option>
+    </select>
+</div></div>
+</div>
 <div class="row mb-3">
     <div class="col-md-4">
     <div class="pb-2 was-validated">

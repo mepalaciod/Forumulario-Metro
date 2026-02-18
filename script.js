@@ -104,7 +104,7 @@ const cual= document.getElementById('cual');
       semestreContainer.style.display = "none";
 
       if (Nivel_academico === "PRIMARIA") {
-        console.log("Cargando PRIMARIA");
+        console.log("PRIMARIA");
         Grado.disabled = false;
         for (let i = 1; i <= 5; i++)      {
         const option = document.createElement("option");
@@ -125,13 +125,134 @@ const cual= document.getElementById('cual');
   } 
 
 else if (Nivel_academico === "MEDIA") {
-  Grado.disabled = true;
-  Grado.style.display ="none";
+    Grado.disabled = false;
+    for (let i = 6; i <= 11; i++) {
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = i;
+      Grado.appendChild(option);
+    }
 } 
 
 else if (Nivel_academico === "SUPERIOR") {
-    Grado.disabled = true;
-    Grado.style.display = "none";
+    Grado.disabled = false;
+    gradoContainer.style.display = "none";
+    if (Nivel_academico === "SUPERIOR")
     semestreContainer.style.display = "block";
   }
+});
+
+  document.getElementById("Presenta_Discapacidad").addEventListener("change", function() {
+      const Presenta_Discapacidad= this.value;
+      const Tipo_de_discapacidadContainer = document.getElementById("Tipo_de_discapacidadContainer");
+    
+      if (Presenta_Discapacidad === "SI") {
+    Tipo_de_discapacidadContainer.style.display = "block";
+      } else if (Presenta_Discapacidad === "NO") {
+        Tipo_de_discapacidad.disabled = "false";
+        Tipo_de_discapacidadContainer.style.display="none";
+      } else {
+    Tipo_de_discapacidadContainer.style.display = "none";
+  }
+});
+
+const datos = {
+  "MEDELLÍN": { 
+    "Comuna 1 - Popular": ["Popular Nº1", "Popular Nº2", "Granizal", "La Isla"], 
+    "Comuna 2 - Santa Cruz": ["La Rosa", "La Frontera", "La Salle", "Moscú Nº1"],
+    "Comuna 3 - Manrique": ["Campo Valdés Nº1", "Campo Valdés Nº2", "Versalles Nº1", "Versalles Nº2"], 
+    "Comuna 4 - Aranjuez": ["Brasilia", "Moravia", "San Pedro", "Aranjuez"], 
+    "Comuna 5 - Castilla": ["Castilla", "Florencia", "Boyacá Las Brisas", "Las Cabañas"], 
+    "Comuna 6 - Doce de Octubre": ["Doce de Octubre Nº1", "Doce de Octubre Nº2", "Santander", "Kennedy"], 
+    "Comuna 7 - Robledo": ["Aures Nº1", "Aures Nº2", "Robledo", "Córdoba"], 
+    "Comuna 8 - Villa Hermosa": ["Villa Hermosa", "La Mansión", "Enciso", "El Pinal"], 
+    "Comuna 9 - Buenos Aires": ["Buenos Aires", "Miraflores", "Alejandro Echavarría", "Bomboná Nº2"],
+    "Comuna 10 - La Candelaria": ["Centro", "San Diego", "Las Palmas", "Prado"], 
+    "Comuna 11 - Laureles-Estadio": ["Laureles", "Estadio", "San Joaquín", "Bolivariana"], 
+    "Comuna 12 - La América": ["La América", "Santa Lucía", "Campo Alegre", "Ferrini"], 
+    "Comuna 13 - San Javier": ["San Javier Nº1", "San Javier Nº2", "Veinte de Julio", "El Salado"], 
+    "Comuna 14 - El Poblado": ["El Poblado", "Patio Bonito", "Castropol", "La Florida"], 
+    "Comuna 15 - Guayabal": ["Guayabal", "Trinidad", "Campo Amor", "Cristo Rey"], 
+    "Comuna 16 - Belén": ["Belén", "Los Alpes", "La Gloria", "Rincón de Los Ángeles"], 
+    "Santa Elena (corregimiento)": ["Santa Elena"], 
+    "San Cristóbal (corregimiento)": ["San Cristóbal"], 
+    "San Antonio de Prado (corregimiento)": ["San Antonio de Prado"], 
+    "Altavista (corregimiento)": ["Altavista"], 
+    "Palmitas (corregimiento)": ["Palmitas"] 
+  },
+  "BELLO": { "Niquía": ["Niquía", "Niquía Camacol", "Niquía Sector Estación"], 
+    "Zamora": ["Zamora", "Zamora Parte Alta"], 
+    "Cabañas": ["Cabañas", "Cabañas Norte"], 
+    "París": ["París", "París Parte Alta"], 
+    "Santa Ana": ["Santa Ana"], 
+    "San Félix (corregimiento)": ["San Félix"] 
+  },  
+  "ENVIGADO": { 
+    "Zona Centro": ["Centro", "La Magnolia", "El Dorado"], 
+    "Zona Noroccidental": ["El Trianón", "El Esmeraldal"], 
+    "Zona Suroriental": ["San Rafael", "Las Antillas"], 
+    "Perico (corregimiento)": ["Perico"], 
+    "Arenales (corregimiento)": ["Arenales"] }, 
+    
+  "ITAGÜI": { 
+    "Santa María": ["Santa María Nº1", "Santa María Nº2"], 
+    "San Gabriel": ["San Gabriel"], 
+    "Ditaires": ["Ditaires"], 
+    "La Gloria": ["La Gloria"], "El Rosario": ["El Rosario"] 
+  }, 
+  "SABANETA": { 
+      "Centro": ["Centro", "San José"], 
+      "La Doctora": ["La Doctora", "María Auxiliadora"] 
+    }, 
+  "BARBOSA": { 
+        "Centro": ["Centro"], 
+        "El Hatillo": ["El Hatillo"], 
+        "Popalito": ["Popalito"] }, 
+  "CALDAS": { 
+        "Centro": ["Centro"], 
+        "La Corrala": ["La Corrala"], 
+        "La Miel": ["La Miel"] }, 
+  "COPACABANA": { 
+    "Centro": ["Centro"], 
+    "El Zarzal": ["El Zarzal"], 
+    "La Chuscala": ["La Chuscala"] }, 
+  "LA_ESTRELLA": { 
+    "Centro": ["Centro"], 
+    "La Ferrería": ["La Ferrería"], 
+    "La Tablaza": ["La Tablaza"] 
+  } 
+};
+
+const municipioSelect = document.getElementById("Municipio_de_residencia");
+const comunaSelect = document.getElementById("comuna_corregimiento");
+const barrioSelect = document.getElementById("barrio_donde_vive");
+
+municipioSelect.addEventListener("change", function() {
+  const municipio = this.value;
+  comunaSelect.innerHTML = `<option value="" selected disabled>Seleccionar</option>`;
+  barrioSelect.innerHTML = `<option value="" selected disabled>Seleccionar</option>`;
+
+  if (datos[municipio]) {
+    Object.keys(datos[municipio]).forEach(comuna => {
+      const option = document.createElement("option");
+      option.value = comuna;
+      option.textContent = comuna;
+      comunaSelect.appendChild(option);
+  });
+}
+});
+
+comunaSelect.addEventListener("change", function() {
+  const municipio = municipioSelect.value;
+  const comuna = this.value; 
+  barrioSelect.innerHTML = `<option value="" selected disabled>Seleccionar</option>`;
+
+  if (datos[municipio] && datos[municipio][comuna]){ 
+    datos[municipio][comuna].forEach(barrio => {
+      const option = document.createElement("option");
+      option.value = barrio;
+      option.textContent = barrio;
+      barrioSelect.appendChild(option);
+  });
+}
 });
