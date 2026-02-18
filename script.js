@@ -256,3 +256,47 @@ comunaSelect.addEventListener("change", function() {
   });
 }
 });
+
+function mostrarValoresFormulario() {
+  const formulario = {
+    razon: document.getElementById("Razones").value,
+    tipo_documento: document.getElementById("Tipo_documento").value,
+    numero_documento: document.getElementById("Numero_documento").value,
+    primer_nombre: document.getElementById("Primer_nombre").value,
+    segundo_nombre: document.getElementById("Segundo_nombre").value,
+    primer_apellido: document.getElementById("Primer_apellido").value,
+    segundo_apellido: document.getElementById("Segundo_apellido").value,
+    nombres_apellidos: document.getElementById("Nombres_apellidos").value,
+    genero: document.getElementById("genero").value,
+    cual: document.getElementById("cual").value,
+    via_principal: document.getElementById("viaPrincipal").value,
+    numero: document.getElementById("numero").value,
+    prefijo1: document.getElementById("prefijo1").value,
+    nombre_via: document.getElementById("nombreVia").value,
+    via_secundaria: document.getElementById("viaSecundaria").value,
+    prefijo2: document.getElementById("prefijo2").value,
+    cuadrante: document.getElementById("cuadrante").value,
+    placa: document.getElementById("placa").value,
+    complemento: document.getElementById("complemento").value,
+    direccion_completa: document.getElementById("direccion_Completa").value,
+    municipio: document.getElementById("Municipio_de_residencia").value,
+    comuna: document.getElementById("comuna_corregimiento").value,
+    barrio: document.getElementById("barrio_donde_vive").value,
+    fecha_nacimiento: document.getElementById("Fecha_de_nacimiento").value,
+    edad: document.getElementById("resultadoEdad").textContent,
+    estrato: document.getElementById("Estrato_Socioeconómico").value,
+    sisben: document.getElementById("Nivel_o_puntaje_del_SISBEN").value,
+    telefono: document.getElementById("Teléfono_célular").value,
+    nivel_academico: document.getElementById("Nivel_academico").value,
+    grado: document.getElementById("Grado").value,
+    semestre: document.getElementById("Semestre").value,
+    civica: document.getElementById("Número_de_cívica_personalizada").value,
+    presenta_discapacidad: document.getElementById("Presenta_Discapacidad").value,
+    tipo_discapacidad: document.getElementById("Tipo_de_discapacidad").value,
+    beneficio_sapiencia: document.getElementById("¿Qué_beneficio_tiene_activo_con_Sapiencia?").value
+  };
+
+  console.log("=== DATOS DEL FORMULARIO ===");
+  console.table(formulario);
+  console.log(formulario);
+}
