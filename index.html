@@ -54,7 +54,7 @@
                 <div class="was-validated">
     <label for="pregunta" class="form-label mb-2">¿Por qué vas a diligenciar el formulario?</label>
     <select name="¿Por qué vas a diligenciar el formulario?" id="Razones" class="form-select" required>
-        <option value="Seleccionar" selected disabled>Seleccionar</option>
+        <option value="" selected disabled>Seleccionar</option>
         <option value="Solicitar Beneficio">Solicitar Beneficio</option>
         <option value="Actualizar información">Actualizar información</option>
             </select>
@@ -216,7 +216,7 @@
             <div class="col-md-3">
                 <div class="pb-2 was-validated">
     <label for="prefijo2" class="form-label mb-2">Prefijo</label>
-    <input type="text" id="prefijo2" name="prefijo2" class="form-control">
+    <input type="text" id="prefijo2" name="prefijo2" class="form-control" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');">
             </div>
         </div>
             <div class="col-md-3">
@@ -285,8 +285,7 @@
         Edad: <span id="resultadoEdad" class="fw-bold">0</span> años
                 </div></div>
         </div></div>
- <script src="script.js"></script>
-    
+
     <div class="row mb-3">
             <div class="col-md-4">
                 <div class="pb-2 was-validated">
@@ -326,31 +325,49 @@
     </div>
 </div>
     <div class="row mb-3">
-        <div class="col-md-4">
+        <div class="col-md-3">
     <div class="pb-2 was-validated">
         <div class="escolar">
-        <label for="Nivel_académico" class="form-label mb-2">Nivel académico</label>
-    <select name="Nivel_académico" id="Nivel_académico" class="form-select" required>
-        <option value="" selected disabled></option>Seleccionar</option>
+        <label for="Nivel_academico" class="form-label mb-2">Nivel académico</label>
+    <select name="Nivel_academico" id="Nivel_academico" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
         <option value="PRIMARIA">PRIMARIA</option>
         <option value="SECUNDARIA">SECUNDARIA</option>
         <option value="MEDIA">MEDIA</option>
         <option value="SUPERIOR">SUPERIOR</option>
-    </select></div></div></div>
-    <div class="col-md-4">
+    </select>
+        </div>
+    </div>
+</div>
+    <div class="col-md-3">
         <div class="pb-2 was-validated">
     <label for="Grado" class="form-label mb-2">Grado</label>
     <select name="Grado" id="Grado" class="form-select" required>
         <option value="" selected disabled>Seleccionar</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-</select>
+    </select>
 </div>
 </div>
     </div>
+
+    <div class="col-md-3" 
+    id="semestreContainer" style="display:none;"> 
+        <div class="pb-2 was-validated"> 
+            <label for="Semestre" class="form-label mb-2">Semestre</label> 
+            <select id="Semestre" name="Semestre" class="form-select"> 
+                <option value="" selected disabled>Seleccionar</option> 
+                <option value="1">1</option> 
+                <option value="2">2</option> 
+                <option value="3">3</option> 
+                <option value="4">4</option> 
+                <option value="5">5</option> 
+                <option value="6">6</option> 
+                <option value="7">7</option> 
+                <option value="8">8</option> 
+                <option value="9">9</option> 
+                <option value="10">10</option> 
+            </select> 
+        </div> 
+    </div> 
 <div class="row mb-3">
     <div class="col-md-4">
     <div class="pb-2 was-validated">
@@ -381,52 +398,112 @@
         <option value="MEJORES DEPORTISTAS">MEJORES DEPORTISTAS</option>
         <option value="@MEDELLÍN">@MEDELLÍN</option>
         <option value="BILINGÜISMO">BILINGÜISMO</option>
-    </select></div></div></div></form></div></div>
+    </select></div></div></div></form>
+    </div>
+</div>
 
-    
-    
-    <div class="botón_adjunto">
-
-        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target">Copia del documento de identificación</button>
-        <dialog id="modal1">
-        <p>Adjunta copia documento de identidad</p>
-        <label for="Elegir_archivo">Elegir archivo</label>
-        <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
-        <input type="file" id="Elegir_archivo" name="Elegir_archivo" accept=".pdf,.jpg,.png">
-        <button type="submit">Subir archivo</button>
-        </form>
-        <button onclick="window.modal1.close();">Salir</button>
-    </dialog>
-
-        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal2.showModal();" required>Copia de servicios públicos domiciliarios</button>
-    <dialog id="modal2">
-        <p>Adjuntar copia de servicios públicos domiciliarios</p>
-        <label for="Elegir_archivo">Elegir archivo</label>
-        <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
-        <input type="file" id="Elegir_archivo" name="Elegir_archivo" accept=".pdf,.jpg,.png" required>
-        <button type="submit">Subir archivo</button>
-        </form>
-        <button onclick="window.modal2.close();">Salir</button>
-    </dialog>
-    <button type="button" class="btn btn-primary btn-lg" onclick="window.modal3.showModal();">Copia de la tarjeta cívica</button>
-    <dialog id="modal3">
-        <p>Adjuntar Copia de la tarjeta cívica</p>
-        <label for="Elegir_archivo">Elegir archivo</label>
-        <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
-        <input type="file" id="Elegir_archivo" name="Elegir_archivo" accept=".pdf,.jpg,.png" required>
-        <button type="submit">Subir archivo</button>
-        </form>
-        <button onclick="window.modal3.close();">Salir</button>
-        </dialog>
-        <button type="button" class="btn btn-primary btn-lg" onclick="window.modal4.showModal();">Certificado de discapacidad o historia clínica</button>
-    <dialog id="modal4">
-        <p>Adjuntar Certificado de discapacidad o historia clínica</p>
-        <label for="Elegir_archivo">Elegir archivo</label>
-        <form id="uploadForm" action="/ruta-de-subida" method="POST" enctype="multipart/form-data">
-        <input type="file" id="Elegir_archivo" name="Elegir_archivo" accept=".pdf,.jpg,.png" required>
-        <button type="submit">Subir archivo</button>
-        </form>
-        <button onclick="window.modal4.close();">Salir</button>
+                <div class="botón_adjunto">    
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDoc">Copia del documento de identificación</button>
+                    <div class="modal fade" id="modalDoc" tabindex="-1" aria-labelledby="modalDoclabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar documento identidad</p>
+                            <form action="/ruta-de-subida" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="docIdentidad" class="form-label">Elegir archivo</label>
+                        <input type="file" id="docIdentidad" name="docIdentidad" class="form-control" accept=".pdf,.jpg,.png" required>
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div>               
+                        <div class="progress mb-3"> 
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%;" id="progressBar"> 0% </div> 
+                            </div> 
+                        <button type="submit" class="btn btn-outline-success">Subir archivo</button> 
+                        </form> 
+                    </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal2Doc">Copia de servicios públicos domiciliarios</button>
+                    <div class="modal fade" id="modal2Doc" tabindex="-1" aria-labelledby="modal2Doclabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar copia de servicios públicos domiciliarios</p>
+                            <form action="/ruta-de-subida" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="docIdentidad" class="form-label">Elegir archivo</label>
+                        <input type="file" id="docIdentidad" name="docIdentidad" class="form-control" accept=".pdf,.jpg,.png" required>
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div>               
+                        <div class="progress mb-3"> 
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%;" id="progressBar"> 0% </div> 
+                            </div> 
+                        <button type="submit" class="btn btn-outline-success">Subir archivo</button> 
+                        </form> 
+                    </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal3Doc">Copia de la tarjeta cívica</button>
+                    <div class="modal fade" id="modal3Doc" tabindex="-1" aria-labelledby="modal3Doclabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar copia de la tarjeta cívica</p>
+                            <form action="/ruta-de-subida" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="docIdentidad" class="form-label">Elegir archivo</label>
+                        <input type="file" id="docIdentidad" name="docIdentidad" class="form-control" accept=".pdf,.jpg,.png" required>
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div>               
+                        <div class="progress mb-3"> 
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%;" id="progressBar"> 0% </div> 
+                            </div> 
+                        <button type="submit" class="btn btn-outline-success">Subir archivo</button> 
+                        </form> 
+                    </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal4Doc">Certificado de discapacidad o historia clínica</button>
+                    <div class="modal fade" id="modal4Doc" tabindex="-1" aria-labelledby="modal4Doclabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar certificado de discapacidad o historia clínica</p>
+                            <form action="/ruta-de-subida" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="docIdentidad" class="form-label">Elegir archivo</label>
+                        <input type="file" id="docIdentidad" name="docIdentidad" class="form-control" accept=".pdf,.jpg,.png" required>
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div>               
+                        <div class="progress mb-3"> 
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 0%;" id="progressBar"> 0% </div> 
+                            </div> 
+                        <button type="submit" class="btn btn-outline-success">Subir archivo</button> 
+                        </form> 
+                    </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+        
     </dialog></div>
 
 <div class="box_privacidad"><p>Es importante señalar que todo estudiante que requiere del PERFIL ESTUDIANTIL (TIQUETE METRO) deberá tener la tarjeta 
@@ -470,7 +547,7 @@ Atención al Cliente -PAC- del Metro de Medellín, para reportar su perdida y re
 <label class="form-check-label" for="acepto">Acepto términos y condiciones></label>
 </div>
 <form action="/enviar" method="post">
-    <div class="enviar"><button type="button" class="btn btn-primary btn-lg" ">Enviar</button></div></div></form></form>
+    <div class="enviar"><button type="button" class="btn btn-outline-success">Enviar</button></div></div></form></form>
 
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    

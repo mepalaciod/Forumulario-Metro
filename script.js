@@ -94,3 +94,44 @@ const cual= document.getElementById('cual');
     if (edad < 0) { edad = 0; } 
     if (edad > 100) { edad = 100; }
     resultadoEdad.textContent = edad; });
+    
+    document.getElementById("Nivel_academico").addEventListener("change", function() {
+      const Nivel_academico = this.value;
+      const Grado = document.getElementById("Grado");
+      const semestreContainer = document.getElementById("semestreContainer");
+
+      Grado.innerHTML = `<option value="" selected disabled>Seleccionar</option>`;
+      semestreContainer.style.display = "none";
+
+      if (Nivel_academico === "PRIMARIA") {
+        console.log("Cargando PRIMARIA");
+        Grado.disabled = false;
+        for (let i = 1; i <= 5; i++)      {
+        const option = document.createElement("option");
+        option.value = i;
+      option.textContent = i;
+      Grado.appendChild(option);
+    }
+  }
+    
+    else if (Nivel_academico === "SECUNDARIA") {
+        Grado.disabled = false;
+    for (let i = 6; i <= 11; i++) {
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = i;
+      Grado.appendChild(option);
+    }
+  } 
+
+else if (Nivel_academico === "MEDIA") {
+  Grado.disabled = true;
+  Grado.style.display ="none";
+} 
+
+else if (Nivel_academico === "SUPERIOR") {
+    Grado.disabled = true;
+    Grado.style.display = "none";
+    semestreContainer.style.display = "block";
+  }
+});
