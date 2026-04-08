@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Preguntas.css') }}">
+</head>
+<body>
+    <img src="{{ asset('imagen.jpeg') }}" alt="Imagen" class="img-fluid">
+
+    <div class="">
+        <div class="box_informativo"><h1>SOLICITUD PERFIL ESTUDIANTIL (TIQUETE METRO)</h1>
+    <p>Si cumples con estos requisitos puedes aplicar al beneficio</p> 
+<ul>
+    <li>Si eres beneficiario de Sapiencia, ya sea por medio de Fondos en programas de pregrado o posgrado, o a través de la Matrícula Cero, tienes la posibilidad de acceder al perfil preferencial en tu tarjeta cívica del Metro de Medellín.</li>
+    <li>Residir en viviendas de estratos 1, 2 y 3.</li>
+    <li>Tener entre 10 y hasta 28 años en el momento de la inscripción, o ser una persona con discapacidad.</li>
+</ul>
+    <p>Es importante aclarar que, dentro de los medios de transporte que cubre este beneficio, se encuentran todos aquellos en los cuales se hace uso de la tarjeta cívica de los vehículos del sistema de Transporte masivo, de la Empresa Metro de Medellín Ltda.</p>
+<ul>
+    <li>Metro</li>
+    <li>Metro Cable</li>
+    <li>MetroPlus</li>
+    <li>Rutas Alimentadoras</li>
+    <li>Tranvía</li>
+</ul>
+<p>Se exceptúan las rutas integradas, las cuales hacen un recorrido
+    desde los barrios hasta las estaciones de la red Metro. 
+    No aplican dado que éstos pertenecen a empresas privadas que presten el servicio de articulación a la red del Sistema Metro.
+    Nota: Sapiencia solo hace el reporte de la presente solicitud a la SECRETARIA DE EDUCACIÓN DEL DISTRITO ESPECIAL DE CIENCIA, 
+    TECNOLOGÍA E INNOVACIÓN DE MEDELLÍN y posteriormente son ellos quienes hacen la validación final de requisitos y reportan oficialmente al METRO. CIRCULAR NÚMERO 202460000077 DE 02/04/2024
+</p>
+
+</div>
+
+<div class="container-fluid py-4">
+
+    <div class="border rounded p-4 bg-white">
+
+<div class="Preguntas_formulario">   
+    <h2>Formulario de solicitud</h2>
+<p>Es indispensable para la solicitud del beneficiario diligenciar completamente este Formulario</p>
+<form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
+    @csrf   
+@if ($errors->any())
+<div class="alert alert-danger">
+<ul class="mb-0">
+@foreach ($errors->all() as $error)
+<li>{{ $error }}</li>
+@endforeach
+</ul>
+</div>
+@endif
+    
+<div class="row mb-3 d-flex align-items-stretch">
+        <div class="col-md-6">
+            <div class="pb-2 was-validated">
+    <label for="razones_diligenciamiento" class="form-label mb-2">¿Por qué vas a diligenciar el formulario?</label>
+    <select name="razones_diligenciamiento" id="razones_diligenciamiento" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="Solicitar Beneficio">Solicitar Beneficio</option>
+        <option value="Actualizar información">Actualizar información</option>
+            </select>
+        </div>
+    </div>
+ </div>
+    
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="pb-2 was-validated">
+        <label for="tipo_documento" class="form-label mb-2">Tipo de documento</label>
+        <select name="tipo_documento" id="tipo_documento" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="CC">CC</option>
+        <option value="TI">TI</option>
+        <option value="RC">RC</option>
+        <option value="PPT">PPT</option>
+        <option value="NES">NES</option>
+        <option value="NUIP">NUIP</option>
+        <option value="PAP">PAP</option>
+        <option value="PED">PED</option>
+        <option value="CE">CE</option>
+            </select>
+        </div>
+    </div>
+ 
+
+    <div class="col-md-6">
+        <div class="pb-2 was-validated">
+        <label for="numero_documento" class="form-label mb-2">Número de documento</label>
+    <input type="text" id="numero_documento" name="numero_documento" class="form-control" minlength="5" maxlength="10" 
+    pattern="[0-9]+" required>
+            </div>
+        </div>
+</div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="nombre">
+                    <div class="pb-2 was-validated">
+    <label for="primer_nombre" class="form-label mb-2">Primer nombre</label>
+    <input type="text" id="primer_nombre" name="primer_nombre" class="form-control" required>
+        </div>
+    </div>
+</div>
+    <div class="col-md-3"> 
+            <div class="pb-2 was-validated">
+    <label for="segundo_nombre" class="form-label mb-2">Segundo nombre</label>
+    <input type="text" id="segundo_nombre" name="segundo_nombre" class="form-control">
+    </div>
+</div>
+        <div class="col-md-3">  
+            <div class="pb-2 was-validated">
+        <label for="primer_apellido" class="form-label mb-2">Primer apellido</label>
+    <input type="text" id="primer_apellido" name="primer_apellido" class="form-control" required>
+        </div>
+    </div>     
+    <div class="col-md-3">
+        <div class="pb-2 was-validated">
+        <label for="segundo_apellido" class="form-label mb-2">Segundo apellido</label>
+    <input type="text" id="segundo_apellido" name="segundo_apellido" class="form-control">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mb-3">
+        <div class="pb-2 was-validated">
+            <div class="col-md-12">
+        <label for="nombres_apellidos_civica" class="form-label mb-2">Nombres y apellidos (como esta marcada la CÍVICA)</label>
+    <input type="text" id="nombres_apellidos_civica" name="nombres_apellidos_civica" class="form-control" required>
+            </div>
+        </div>
+    </div>
+
+        <div class="col-md-12">
+            <div class="pb-2 was-validated">
+        <label for="genero" class="form-label mb-2">Género</label>
+    <select name="genero" id="genero" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="MASCULINO">MASCULINO</option>
+        <option value="FEMENINO">FEMENINO</option>
+        <option value="OTRAS">OTRAS</option>
+            </select>
+        </div>
+    </div>
+    
+<div class="col-md-6">
+    <div class="pb-2 was-validated">
+    <label for="cual" class="form-label mb-2">Cuál?</label>
+    <input type="text" id="cual" name="cual" class="form-control">
+            </div>
+        </div>
+
+
+    <div class="dirección">
+        <div class="mb-3">
+    <p class="mb-2">¿Cuál es la dirección de su residencia?</p>
+</div>
+            <div class="row mb">
+                <div class="col-md-3">
+                    <div class="pb-2 was-validated">
+        <label for="viaprincipal" class="form-label mb-2">Vía principal</label>
+    <select name="viaprincipal" id="viaprincipal" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="AUTOPISTA">AUTOPISTA</option>
+        <option value="AVENIDA">AVENIDA</option>
+        <option value="AVENIDA CALLE">AVENIDA CALLE</option>
+        <option value="AVENIDA CARRERA">AVENIDA CARRERA</option>
+        <option value="BULEVAR">BULEVAR</option>
+        <option value="CALLE">CALLE</option>
+        <option value="CARRERA">CARRERA</option>
+        <option value="CIRCUNVALAR">CIRCUNVALAR</option>
+        <option value="CTAS CORRIDAS">CTAS CORRIDAS</option>
+        <option value="DIAGONAL">DIAGONAL</option>
+        <option value="KILOMETRO">KILOMETRO</option>
+        <option value="OTRA">OTRA</option>
+        <option value="PASAJE">PASAJE</option>
+        <option value="PASEO">PASEO</option>
+        <option value="PEATONAL">PEATONAL</option>
+        <option value="TRANSVERSAL">TRANSVERSAL</option>
+        <option value="TRONCAL">TRONCAL</option>
+        <option value="VARIANTE">VARIANTE</option>
+        <option value="VIA">VIA</option>
+        </select>
+    </div>
+</div>
+
+    <div class="col-md-3">
+        <div class="pb-2 was-validated">
+    <label for="numero" class="form-label mb-2">Número</label>
+    <input type="number" id="numero" name="numero" class="form-control" required>
+    </div>
+</div>
+    <div class="col-md-3">
+        <div class="pb-2 was-validated">
+    <label for="prefijo1" class="form-label mb-2">Prefijo</label>
+    <input type="text" id="prefijo1" name="prefijo1" class="form-control">
+    </div>
+</div>
+    <div class="col-md-3">
+        <div class="pb-2 was-validated">
+    <label for="nombrevia" class="form-label mb-2">Nombre vía </label>
+        <select name="nombrevia" id="nombrevia" class="form-select">
+        <option value="" selected disabled>Seleccione</option>
+        <option value="BIS">BIS</option>
+        <option value="ESTE">ESTE</option>
+        <option value="NORTE">NORTE</option>
+        <option value="OESTE">OESTE</option>
+        <option value="SUR">SUR</option>
+        </select>
+        </div>
+    </div>
+</div>
+    <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="pb-2 was-validated">
+        <label for="viasecundaria" class="form-label mb-2">Vía secundaria</label>
+        <input type="number" id="viasecundaria" name="viasecundaria" class="form-control" required>    
+    </div>
+</div>
+            <div class="col-md-3">
+                <div class="pb-2 was-validated">
+    <label for="prefijo2" class="form-label mb-2">Prefijo</label>
+    <input type="text" id="prefijo2" name="prefijo2" class="form-control" oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');">
+            </div>
+        </div>
+            <div class="col-md-3">
+                <div class="pb-2 was-validated">
+    <label for="cuadrante" class="form-label mb-2">Cuadrante</label>
+    <select name="cuadrante" id="cuadrante" class="form-select" >
+        <option value="" selected disabled>Seleccione</option>
+        <option value="BIS">BIS</option>
+        <option value="ESTE">ESTE</option>
+        <option value="NORTE">NORTE</option>
+        <option value="OESTE">OESTE</option>
+        <option value="SUR">SUR</option>
+        </select>
+    </div>
+</div>
+        <div class="col-md-3">
+            <div class="pb-2 was-validated">
+    <label for="placa" class="form-label mb-2">Placa</label>
+    <input type="number" id="placa" name="placa" class="form-control">
+            </div>
+        </div>
+    </div>
+</div>                     
+<div class="col-md-12">
+            <div class="pb-2 was-validated">
+    <label for="complemento" class="form-label mb-2">Complemento</label>
+    <input type="text" id="complemento" name="complemento" class="form-control"></label>
+        </div>
+    </div>
+                <div class="col-md-12">
+            <div class="pb-2 was-validated"> 
+                <div id="direccioncompleta" class="form-label mb-2">Dirección completa:
+                <input type="text" id="direccioncompleta" name="direccioncompleta" class="form-control" readonly> 
+            </div>
+        </div>
+    </div>
+                
+        <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="pb-2 was-validated">
+    <label for="municipio_residencia" class="form-label mb-2">Municipio de residencia</label>
+    <select name="municipio_residencia" id="municipio_residencia" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="BARBOSA">BARBOSA</option>
+        <option value="BELLO">BELLO</option>
+        <option value="CALDAS">CALDAS</option>
+        <option value="COPACABANA">COPACABANA</option>
+        <option value="ENVIGADO">ENVIGADO</option>
+        <option value="ITAGÜI">ITAGÜI</option>
+        <option value="LA_ESTRELLA">LA ESTRELLA</option>
+        <option value="MEDELLÍN">MEDELLÍN</option>
+        <option value="SABANETA">SABANETA</option>
+    </select>
+        </div>
+    </div>
+            <div class="col-md-4">
+                <div class="pb-2 was-validated">
+    <label for="comuna_corregimiento" class="form-label mb-2">Comuna donde vive</label>
+    <select name="comuna_corregimiento" id="comuna_corregimiento" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+    </select>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="pb-2 was-validated">
+    <label for="barrio" class="form-label mb-2">Barrio donde vive</label>
+    <select name="barrio" id="barrio" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+    </select>
+            </div>
+            </div>
+
+        <div class="row g-2 align-items-center mb-3"> 
+            <div class="col-md-4">
+                <div class="p-2 was-validated">
+                <div class="form-group mb-0">
+        <label for="fecha_nacimiento" class="form-label mb-2">Fecha de nacimiento</label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control">
+        </div>
+    </div>
+</div>
+    <div class="col-md-4">
+    <div class="alert alert-info">
+        Edad: <span id="resultadoEdad" class="fw-bold">0</span> años
+                </div>
+            </div>
+        </div>
+<div class="relevante">
+    <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="pb-2 was-validated">
+        <label for="estrato_socioeconomico" class="form-label mb-2">Estrato socioeconómico</label>
+            <select name="estrato_socioeconomico" id="estrato_socioeconomico" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+        </div>
+    </div>
+        <div class="col-md-4">
+            <div class="pb-2 was-validated">    
+                <label for="sisben" class="form-label mb-2">Puntaje SISBEN</label>
+    <select name="sisben" id="sisben" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="No_tiene">No tiene</option>
+    </select>
+    </div>
+</div>
+    
+    <div class="col-md-4">
+        <div class="was-validated">
+    <label for="celular" class="form-label mb-2">Teléfono célular</label>
+    <input type="tel" name="celular" id="celular" class="form-control" required maxlength="10" minlength="10" pattern="[0-9]{10}">
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="escolar">    
+<div class="row mb-3">
+        
+        <div class="col-md-4">
+        <div class="pb-2 was-validated">
+        <label for="nivel_academico" class="form-label mb-2">Nivel académico</label>
+    <select name="nivel_academico" id="nivel_academico" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="PRIMARIA">PRIMARIA</option>
+        <option value="SECUNDARIA">SECUNDARIA</option>
+        <option value="MEDIA">MEDIA</option>
+        <option value="SUPERIOR">SUPERIOR</option>
+    </select>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="pb-2 was-validated">
+            <div id="gradoContainer">
+    <label for="grado" class="form-label mb-2">Grado</label>
+    <select name="grado" id="grado" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+    </select>
+            </div>
+</div>
+</div>
+
+    <div class="col-md-4" id="semestreContainer" style="display:none;"> 
+        <div class="pb-2 was-validated"> 
+            <label for="semestre" class="form-label mb-2">Semestre</label> 
+            <select id="semestre" name="semestre" class="form-select"> 
+                <option value="" selected disabled>Seleccionar</option> 
+                <option value="1">1</option> 
+                <option value="2">2</option> 
+                <option value="3">3</option> 
+                <option value="4">4</option> 
+                <option value="5">5</option> 
+                <option value="6">6</option> 
+                <option value="7">7</option> 
+                <option value="8">8</option> 
+                <option value="9">9</option> 
+                <option value="10">10</option> 
+            </select> 
+        </div> 
+    </div> 
+    </div>
+    </div>
+
+<div class="row mb-3">
+    <div class="col-md-4">
+    <div class="pb-2 was-validated">
+<label for="numero_civica" class="form-label mb-2">Número de cívica</label>
+<input type="text" name="numero_civica" id="numero_civica"  class="form-control" minlength="5" maxlength="10" 
+    pattern="[0-9]+" required>
+        </div>
+    </div>
+
+<div class="col-md-4">
+    <div class="pb-2 was-validated">
+    <label for="presenta_discapacidad" class="form-label mb-2">¿Presenta Discapacidad?</label>
+    <select name="presenta_discapacidad" id="presenta_discapacidad" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="SI">SI</option>
+        <option value="NO">NO</option>
+    </select>
+    </div>
+</div>
+<div class="col-md-4" id="tipo_discapacidadContainer" style="display:none;">
+    <div class="pb-2 was-validated">
+    <label for="tipo_discapacidad" class="form-label mb-2">Tipo de discapacidad</label>
+    <select name="tipo_discapacidad" id="tipo_discapacidad" class="form-select">
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="FISICA">FÍSICA</option>
+        <option value="SENSORIAL">SENSORIAL</option>
+        <option value="INTELECTUAL">INTELECTUAL</option>
+        <option value="PSIQUICA">PSIQUICA</option>
+        <option value="MULTIPLE">MULTIPLE</option>
+    </select>
+</div>
+</div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-4">
+    <div class="pb-2 was-validated">
+    <label for="beneficio_sapiencia" class="form-label mb-2">¿Qué beneficio tiene activo con sapiencia?</label>
+    <select name="beneficio_sapiencia" id="beneficio_sapiencia" class="form-select" required>
+        <option value="" selected disabled>Seleccionar</option>
+        <option value="VISION4RIOS">VISION4RIOS</option>
+        <option value="MATRICULA_CERO">MATRICULA CERO</option>
+        <option value="FONDOS_PREGRADO">FONDOS PREGRADO</option>
+        <option value="FONDOS_POSGRADO">FONDOS POSGRADO</option>
+        <option value="MEJORES_BACHILLERES">MEJORES BACHILLERES</option>
+        <option value="MEJORES DEPORTISTAS">MEJORES DEPORTISTAS</option>
+        <option value="@MEDELLÍN">@MEDELLÍN</option>
+        <option value="BILINGÜISMO">BILINGÜISMO</option>
+    </select>
+            </div>
+        </div>
+    </div>
+
+        <div class="botón_adjunto">    
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDoc">Copia del documento de identificación</button>
+        <div class="modal fade" id="modalDoc" tabindex="-1" aria-labelledby="modalDoclabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content shadow-lg">
+                    <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar documento identidad</p>
+                        <div class="mb-3">
+                                <label class="form-label">Elegir archivo</label>     
+                                <label for="doc_identidad" class="form-label">Elegir archivo</label>
+                        <input type="file" id="doc_identidad" name="doc_identidad" class="form-control" accept=".pdf,.jpg,.png">
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div>    
+                    </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div>
+</div>
+
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal2Doc">Copia de servicios públicos domiciliarios</button>
+                    <div class="modal fade" id="modal2Doc" tabindex="-1" aria-labelledby="modal2Doclabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar copia de servicios públicos domiciliarios</p>
+                                <div class="mb-3">
+                                    <label for="publicos" class="form-label">Elegir archivo</label>
+                        <input type="file" id="publicos" name="publicos" class="form-control" accept=".pdf,.jpg,.png">
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div>   
+                    </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-secondary-success" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div>
+</div>
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal3Doc">Copia de la tarjeta cívica</button>
+                    <div class="modal fade" id="modal3Doc" tabindex="-1" aria-labelledby="modal3Doclabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar copia de la tarjeta cívica</p>
+                                <div class="mb-3">
+                                    <label for="civica" class="form-label">Elegir archivo</label>
+                        <input type="file" id="civica" name="civica" class="form-control" accept=".pdf,.jpg,.png">
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div>    
+                    </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div>
+</div>
+
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modal4Doc">Certificado de discapacidad o historia clínica</button>
+                    <div class="modal fade" id="modal4Doc" tabindex="-1" aria-labelledby="modal4Doclabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-body">
+                                <p class="fw-bold text-center mb-3">Adjuntar certificado de discapacidad o historia clínica</p>
+                                <div class="mb-3">
+                                    <label for="discapacidad" class="form-label">Elegir archivo</label>
+                        <input type="file" id="discapacidad" name="discapacidad" class="form-control" accept=".pdf,.jpg,.png">
+                                <div class="form-text text-danger mt-2">Solo se permiten archivos PDF, JPG o PNG de máximo 2MB
+                                </div>
+                            </div> 
+                        </div>
+                <div class="modal-footer"> 
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button> 
+            </div> 
+        </div> 
+    </div>  
+</div>
+                </div>
+
+<div class="box_privacidad"><p>Es importante señalar que todo estudiante que requiere del PERFIL ESTUDIANTIL (TIQUETE METRO) deberá tener la tarjeta 
+cívica personalizada, ya que es a través de este documento, es asignado el beneficio. En caso que el estudiante realice cambio del tipo o 
+del número de documento de identidad, deberá acercarse a los Puntos de Atención al Cliente -PAC-de La Empresa Metro de Medellín, para solicitar 
+la actualización de su tarjeta cívica. En caso de pérdida o reposición de la tarjeta cívica, el estudiante deberá acercarse a un Punto de 
+Atención al Cliente -PAC- del Metro de Medellín, para reportar su perdida y realizar el trámite para la expedición de una nueva tarjera cívica
+    y necesariamente deberá reportar el cambio a Sapiencia, para que, en el siguiente informe, se envíe el reporte actualizado de la información 
+    del estudiante beneficiario.
+    En observancia de la Ley 1581 de 2012, reglamentada parcialmente por el Decreto 1377 de 2013 yen la Política de uso y tratamiento de datos 
+    adoptado por SAPIENCIA, la importancia de la neutralidad de los medios tecnológicos y de comunicación, e 
+    interpretando todos estos de manera sistémica e integral en aras de la protección de los derechos y principios que circundan el Habeas Data 
+    y el Tratamiento de Datos Personales, se establecen las siguientes condiciones:</p>
+    <ol>
+        <b><li>FINALIDAD DEL TRATAMIENTO DE LOS DATOS PERSONALES PARA PERSONAJURÍDICA Y NATURAL:</b></li><ol type="a"> 
+        <li>el cumplimiento del lleno de requisitos formales para la suscripción de actas de compromiso y la posterior aplicación de los derechos y 
+            obligaciones que surgen entre las partes con ocasión de su suscripción.</li>
+        <li>el cumplimiento de la Ley de Transparencia y el Derecho de Acceso a la Información Pública Nacional (Ley 1712 del 2014).</li>
+        <li>La presentación de informes a los organismos de control.</li>
+        <li>para la entrega de información a entidades cuyo objeto social y/o misional incluya la recolección de datos estadísticos, históricos 
+            y científicos.</li>
+        <li>por solicitud de autoridad judicial. Manifiesto que me informaron que, si soy menor de edad y/o en caso de recolección de mi información sensible, 
+            tengo derecho a contestar o no las preguntas que me formulen y a entregar o no los datos solicitados. Entiendo que son datos sensibles 
+            aquellos que afectan la intimidad del titular o cuyo uso indebido pueda generar discriminación (información étnica, racial, su 
+            orientación política, convicciones religiosas o filosóficas, la pertenencia a sindicatos, organizaciones sociales, de derechos humanos, 
+            así como los relativos a la salud, vida sexual y datos biométricos). Manifiesto que me informaron que los datos sensibles que se 
+            recolectarán serán utilizados para las finalidades descritas por la Agencia (Uso, recolección, actualización, transferencia)</li></ol type="a">
+<p>Nota: Cualquier uso de la información distinto a lo aquí establecido, no es aceptado ni permitido por SAPIENCIA</p>
+        <b><li>AVISO DE PRIVACIDAD:</b></li><p>Para los efectos de esta cláusula y del aviso de privacidad, se consideran datos sensibles aquellos que puedan revelar 
+            aspectos como origen racial o étnico, estado de salud presente y futura, información genética, creencias religiosas, filosóficas y morales, afiliación 
+            sindical, opiniones políticas, preferencia sexual y todos aquellos datos que puedan afectar la intimidad del titular o cuyo uso indebido pueda 
+            generar su discriminación. Respecto a estos SAPIENCIA se obliga al uso adecuado de los mismos en concordancia con la normativa vigente, la buena fe, 
+            el orden público y el presente Aviso.</p>
+        <b><li>MECANISMOS PARA LA PROTECCIÓN DE DATOS PERSONALES: ACCESO,RECTIFICACIÓN, CANCELACIÓN U OPOSICIÓN:</b></li><p>la persona natural o jurídica Titular de Datos Personales puede solicitar a SAPIENCIA en cualquier momento, el acceso, la rectificación, la cancelación u oposición respecto a los datos personales que le conciernen, en este sentido, presentará su solicitud radicándola directamente en la Entidad o ingresando a la página web 
+        http://www.sapiencia.gov.co en la opción de Contáctenos o escribiendo al correo electrónicoinfo@sapiencia.gov.co o comunicándose al teléfono en Medellín:
+            (+57 4) 4447947.</p>
+    </ol>
+    <p>PARÁGRAFO: con la suscripción de este formulario se entiende aceptada la finalidad del tratamiento de datos y que conoce los mecanismos para su protección.</p>
+                </div>
+    <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="acepto" name="terminos" value="on" requiered>
+<label class="form-check-label" for="acepto">Acepto términos y condiciones</label>
+                </div>
+<div class="mb-3 text-center">
+<button type="submit" class="btn btn-outline-success">
+    Enviar formulario completo
+</button> </div>
+</form>
+                </div>        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+    <script src="{{ asset('js/app.js') }}"></script>
+
+                </body>
+</html>

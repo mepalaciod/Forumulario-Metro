@@ -1,0 +1,32 @@
+.identificación {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.nombre {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.dirección {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    margin: 30px auto;
+    font-family: sans-serif;
+}
+
+.dirección label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.direccion input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
