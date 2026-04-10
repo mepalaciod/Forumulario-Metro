@@ -1,0 +1,38 @@
+body {
+     background: linear-gradient(135deg, #f0f8ff #f7f324d9);
+    font-family:'Poppins',sans-serif;
+    margin:10px;
+    cursor: url("cursor.png"), auto;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+
+    height: 80vh;
+    padding: 0px 50px;
+}
+
+.login-box {
+  width: 300px;    
+  padding: 40px; 
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  background-color: #e6e2e2;
+  margin: auto; 
+}
+
+.register-box {
+  width: 300px;    
+  padding: 40px; 
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  background-color:#e6e2e2; 
+  margin: auto; 
+}
+.box {flex: 1;
+max-width: 300px;
+padding: 20px;
+border:#ccc solid #ccc;
+box-sizing: border-box;}
