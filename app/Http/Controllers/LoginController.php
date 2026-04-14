@@ -17,7 +17,7 @@ public function login(Request $request)
 {
 $credentials = $request->only('email', 'password');
 if (Auth::attempt($credentials)) {
-    return redirect()->intended('dashboard');
+    return redirect()->route('dashboard');
 }
 
 return back()->withErrors([
@@ -49,6 +49,5 @@ public function register(Request $request)
 
         Auth::login($user);
 
-        return redirect('dashboard');
-    }
+return redirect()->route('dashboard');   }
 }

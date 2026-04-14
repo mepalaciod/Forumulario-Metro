@@ -1,0 +1,16 @@
+body {
+            background: linear-gradient(135deg, #2b9842, #1e293b);
+            height: 100vh;
+        }
+button {
+    background-color: transparent;
+    margin: 20px;
+}
+        .card-register {
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 10px 25px green solid(0,0,0,0.2);
+        }

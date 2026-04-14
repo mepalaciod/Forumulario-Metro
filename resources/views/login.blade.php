@@ -16,36 +16,32 @@
     
     <div class="main-container">
     <div class="login-box">
-    <div class="d-flex justify-content-left">
-    <div class="row justify-content-center">
+        <div class="box"> 
     <div class="mb-3">
-    <div class="box">    
-    <h2>Login</h2>
+   
+    <h2>Ingresar</h2>
         <label class="form-label">Correo electrónico</label>
-        <input type="email" name="email" class="form-control" placeholder="correo" required>
+        <input type="email" name="email" class="form-control" placeholder="Correo" required>
 </div>
     <div class="mb-3">
         <label class="form-label">Contraseña</label>
         <input type="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" required>
 </div>
-</div>
+
     <div class="d-grid">
     <button type="submit" class="btn btn-outline-success">Iniciar sesión</button>
-</button>
-        </div>
         </div>
 </div>
 </div>
 <div class="register-box">
-        ¿No tienes cuenta?    
-<div class="d-flex justify-content-end mt-3">
-    <small>
-            <a href="{{ route('register') }}" class="fw-semibold text-success text-decoration-none">
+    <h2>¿No tienes cuenta?</h2>
+        <p>Ingresa tus datos personales y crea una cuenta nueva</p>
+            <div class="mb-3">    
+        <button type="button" onclick="window.location.href='{{ route('register') }}'" class="btn btn-outline-success">
                 Regístrate
-            </a>
-        </small>
-    </div>
+</button>
 </div>
+    </div>
 </div>
 </form>    
 </html>
