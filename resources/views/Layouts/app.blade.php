@@ -8,9 +8,10 @@
 </head>
 <body>
     <img src="{{ asset('imagen.jpeg') }}" alt="Imagen" class="img-fluid">
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('dashboard') }}">Listado</a>
+            <a class="navbar-brand" href="{{ route('dashboard') }}">Formulario Metro</a>
             <ul class="navbar-nav ms-auto">
                 @auth
                     <li class="nav-item">
@@ -29,8 +30,8 @@
     </nav>
 
     <main class="container">
-        {{-- Aquí se mostrará la tabla de registros --}}
         @yield('content')
+        @stack('scripts')
     </main>
 </body>
 </html>

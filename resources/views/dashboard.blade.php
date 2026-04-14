@@ -11,10 +11,7 @@
 </div>
 <div class="mb-3">
     <button id="btnImport" class="btn btn-primary">
-    Adjuntar tabla
-</button>
-<input type="file" id="fileInput" class="d-none" accept=".csv,.xls,.xlsx"
-    </button>
+    Adjuntar tabla</button><input type="file" id="fileInput" class="d-none" accept=".csv,.xls,.xlsx">
 </div>
 </div>
     <table id="tablaDatos" class="table table-striped table-bordered">
@@ -48,6 +45,7 @@
                 <th>Celular</th>
                 <th>Nivel académico</th>
                 <th>Grado</th>
+                <th>Semestre</th>
                 <th>Número cívica</th>
                 <th>Presenta discapacidad</th>
                 <th>Tipo discapacidad</th>
@@ -103,6 +101,17 @@
         </tbody>
     </table>
 </div>
-        <script src="{{ asset('js/dashboard.js') }}"></script>
 
 @endsection
+@push('styles')
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+@endpush
+
+@push('scripts')
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('js/dashboard.js') }}"></script>
+@endpush

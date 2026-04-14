@@ -7,8 +7,13 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller {
+public function showRegisterForm()
+    {
+        return view('auth.register'); // asegúrate de tener resources/views/auth/register.blade.php
+    }
 public function register(Request $request)
 {
+    
     $request->validate([
         'name' => 'required',
         'documento' => 'required',
