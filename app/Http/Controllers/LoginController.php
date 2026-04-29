@@ -16,8 +16,9 @@ public function showLoginForm()
 public function login(Request $request)
 {
 $credentials = $request->only('email', 'password');
-if (Auth::attempt($credentials)) {
-    return redirect()->route('dashboard');
+if (Auth::attempt($credentials,  $request->boolean('remember'))) {
+ $request->session()->regenerate();    
+return redirect('dashboard');
 }
 
 return back()->withErrors([

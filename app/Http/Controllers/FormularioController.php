@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class FormularioController extends Controller
 {
+    public function edit($id)
+    {
+        $formulario = FormularioMetro::findOrFail($id);
+        return view('welcome', compact('formulario'));
+    }
     public function store(Request $request)
     {
         $request->validate([
@@ -82,3 +87,4 @@ class FormularioController extends Controller
 
         return redirect()->back()->with('success', 'Formulario guardado correctamente');}
 }
+
